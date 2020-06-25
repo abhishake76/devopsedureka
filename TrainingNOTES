@@ -1,0 +1,12 @@
+
+Edit firewall options for http to allow custome port like 8080 8090
+
+Add for SELinux policy custom port for http tomcat to OS 
+sudo semanage port -a -t http_port_t -p tcp 8090
+
+Add jenkins users for sudo activity, open 
+sudo vi /etc/sudoers
+or 
+sudo visudo
+Add at end of file 
+jenkins ALL=(ALL) NOPASSWD: ALL
