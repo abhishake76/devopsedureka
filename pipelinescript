@@ -30,13 +30,13 @@ pipeline {
 
       stage('deploy') {
          steps {
-            cp '/var/lib/jenkins/workspace/PackageJob/target/addressbook.war' '/usr/share/tomcat/webapps/'
+           sh 'sudo cp /var/lib/jenkins/workspace/PackageJob/target/addressbook.war /usr/share/tomcat/webapps/'
          }
       }
 
       stage('restarttomcat') {
          steps {
-            sh 'systemctl restart tomcat'
+            sh 'sudo systemctl restart tomcat'
 
          }
       }
