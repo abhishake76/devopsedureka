@@ -1,0 +1,54 @@
+pipeline {
+   agent any
+
+   stages {
+      stage('git') {
+         steps {
+           git 'https://github.com/iamdevopstrainer/DevOpsClassCodes.git'
+         }
+      }
+   }
+   
+     stages {
+      stage('compile') {
+         steps {
+            sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_361/bin/mvn compile'
+         }
+      }
+   }
+   
+     stages {
+      stage('test') {
+         steps {
+            sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_361/bin/mvn test'
+         }
+      }
+   }
+   
+     stages {
+      stage('package') {
+         steps {
+            sh '/var/lib/jenkins/tools/hudson.tasks.Maven_MavenInstallation/MVN_361/bin/mvn package'
+         }
+      }
+   }
+   
+     stages {
+      stage('deploy') {
+         steps {
+            cp '/var/lib/jenkins/workspace/PackageJob/target/addressbook.war' '/usr/share/tomcat/webapps/'
+         }
+      }
+   }
+
+     stages {
+      stage('restarttomcat') {
+         steps {
+            sh 'systemctl restart tomcat'
+
+         }
+      }
+   }
+
+
+}
