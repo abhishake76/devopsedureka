@@ -10,3 +10,19 @@ or
 sudo visudo
 Add at end of file 
 jenkins ALL=(ALL) NOPASSWD: ALL
+
+
+allow passwrod login in google cloud
+etc/ssh/sshd_config
+change password control to yes
+systemctl restart sshd.service
+
+
+add user
+useradd -d /home/jenkins -m jenkins
+passwd jenkins 
+
+add <JENKINS_HOME>/.ssh/known_host file and add entry for master jenkins
+
+
+
