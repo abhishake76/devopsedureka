@@ -24,5 +24,12 @@ passwd jenkins
 
 add <JENKINS_HOME>/.ssh/known_host file and add entry for master jenkins
 
+Docker:
+$ sudo yum install -y yum-utils
 
+$ sudo yum-config-manager \
+    --add-repo \
+    https://download.docker.com/linux/centos/docker-ce.repo
+	
+	$ sudo yum install docker-ce docker-ce-cli containerd.io
 
