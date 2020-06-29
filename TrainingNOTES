@@ -31,5 +31,34 @@ $ sudo yum-config-manager \
     --add-repo \
     https://download.docker.com/linux/centos/docker-ce.repo
 	
-	$ sudo yum install docker-ce docker-ce-cli containerd.io
+$ sudo yum install docker-ce docker-ce-cli containerd.io
+	
+docker run -itd ubuntu (detached mode)
+docker run -it ubuntu (Attached mode, come out from terminal with CTRL p CTRL q, exit/Ctrl c/d will kill your container)
+execute conmand in detached container
+docker exec -it 436fa7b8e560<container id> /bin/bash (connected to root mode)
+
+copy file from root to host
+docker cp /root/abc.txt 436fa7b8e560:/usr/local/apache2/htdocs 
+
+copy  by mapping the volume at start of container
+docker run -itd -P -v /root/data:/usr/local/apache2/htdocs httpd_abhi
+
+create image from docker
+docker commit <docker_id>
+
+
+create with docker file
+
+FROM centos:latest
+MAINTAINER abhishake76
+RUN yum -y install httpd
+COPY appplication.html /var/www/html
+CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
+EXPOSE 80
+
+
+
+
+
 
