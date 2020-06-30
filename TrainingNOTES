@@ -58,6 +58,16 @@ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
 
+tag docker image before push to update with repository id on dockerhub server
+docker tag myhhtpd:v1 abhishake76/devops:v1
+
+[root@masterdevops ~]# docker images
+REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
+abhishake76/devops   v1                  bf0d0e24bad1        23 hours ago        254MB
+myhhtpd              v1                  bf0d0e24bad1        23 hours ago        254MB
+
+docker push
+docker push abhishake76/devops:v1
 
 
 
