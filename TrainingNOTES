@@ -32,7 +32,10 @@ $ sudo yum-config-manager \
     https://download.docker.com/linux/centos/docker-ce.repo
 	
 $ sudo yum install docker-ce docker-ce-cli containerd.io
-	
+
+start docker
+systemctl start docker
+
 docker run -itd ubuntu (detached mode)
 docker run -it ubuntu (Attached mode, come out from terminal with CTRL p CTRL q, exit/Ctrl c/d will kill your container)
 execute conmand in detached container
@@ -69,6 +72,35 @@ myhhtpd              v1                  bf0d0e24bad1        23 hours ago       
 docker push
 docker push abhishake76/devops:v1
 
+
+docker swarm is bundled with docker
+docker swarm start on master
+docker swarm init --advertise-addr 10.xxx.xx.xx
+
+To join master, see the above putput and use below command to join master
+docker swarm join --token SWMTKN-1-432hngh9612v89xs2oa71p4bfa9skyqdxqdw4l7m0jlmu4diph-1po7ofc84zjpb0r0gfh6p58dm 10.128.0.2:2377
+
+to see docker nodes
+dokcer node ls
+
+see docker network
+docket network ls
+
+start service
+docker service create --name devops_httpd -p 8888:80 httpd
+				(service name)	
+see docker service list
+docker service ls
+
+see docker service process
+docker service ps <service_name>
+
+increase replicas for service in docker
+docker service scale devops_httpd=3
+
+update docker service command
+docker service update --image <image> <service>
+docker service update --image abhishake76/httpd:v2 httpd
 
 
 
