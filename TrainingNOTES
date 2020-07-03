@@ -60,6 +60,8 @@ COPY appplication.html /var/www/html
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
 
+create imahge from Dockerfle
+docker build ./
 
 tag docker image before push to update with repository id on dockerhub server
 docker tag myhhtpd:v1 abhishake76/devops:v1
@@ -85,6 +87,9 @@ dokcer node ls
 
 see docker network
 docket network ls
+
+inspect service
+docker inspect
 
 start service
 docker service create --name devops_httpd -p 8888:80 httpd
@@ -145,11 +150,67 @@ kubeadm join 10.128.0.2:6443 --token 1mt32i.k58wewdm1zc6d48b \
     --discovery-token-ca-cert-hash sha256:2eec3041445b378acdf71c4661e30fd14cfbe0375ed0e95f2c1e9bb911be7cd7
 
 
+kubernetes pod yaml file. One pod and deployment file:
+
+init and start pod
+kubectl apply -f httpd-pod.yaml(deployment/pod yaml)
+
+kubectl describe pod httpd-pod-1
+
+remove pod
+kubectl delete -f httpd-pod.yaml
+
+kubectl get deployment
+kubectly get nodes
+
+to scale up replicas in deployment
+kubectl scale deploy httpd-dep --replicas=2
+
+Pod Dfinition: httpd-pod.yaml
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+ name: httpd-pod-1
+ labels:
+  app: httpd-pod-demo
+spec:
+ containers:
+ - name: httpd-cont-1
+   image: httpd
+   ports:
+   - containerPort: 80
+ - name: abhi-httpd
+   image: abhishake76/devops:v1
+   ports:
+   - containerPort: 80
 
 
 
+Deployment definition: 
 
-
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+ name: httpd-dep
+spec:
+ replicas: 2
+ selector: 
+  matchLabels:
+   app: httpd-app
+ template:
+  metadata:
+   name: httpd-pod-dep
+   labels:
+    app: httpd-app
+  spec:
+   containers:
+   - name: httpd-cont-1
+     image: httpd
+     ports:
+    - containerPort: 80
 
 
 
