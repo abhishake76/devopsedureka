@@ -58,3 +58,4 @@ blocks distribution on datanodes is random with few algorithm principles:
 2) load on datanode. if slave is too busy, then less blocks will be stored on that machine
 3) hadoop is rack aware.
 
+
