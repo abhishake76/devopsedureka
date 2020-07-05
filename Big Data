@@ -19,3 +19,42 @@ Failed to start the virtual machine.
 
 Step to fix Error:
 Restart laptop >>> BIOS Settings >> Enable Intel VT-x / AMD -v
+
+
+3 case studies 5+ pages
+
+what is a small file problem?
+what issues will come with 1 million small files?
+what ideal block side should be for HDFS?
+how to specify more than one path for storage?
+
+single master in hadoop1 so single point of faiulre. resolved in hadoop2 with multiple instances of master
+
+master stores all the metada in memoery so should have good memory spec
+and should be installed on reliable, good spec hardware
+
+Mid size spec with medium ran and high disc (16 tb 2*8 mid size) 
+
+default block size of data is 128 mb in hadoop 3.0. earlier it was 64 Mb.
+
+in hdfs-site.xml on master, we can increase or decrease the replication number
+
+in one datanode also, data is tored on mutiple discs to improve disk i/o performance
+Logical volume manager(LVM) for disk decreases i/o performance as it considers all disks as one disk
+jbod uses different mount points for each disk and increases the i/o performance
+
+if datanode does not send heartbeats for 2 min(configurable), then namenode considers datanode as dead node.
+and once dead node is considered, name node will create replicas of blocks on that node to other nodes
+if the node comes up, once Load balancer, kickup, it will delete additional data.
+any of the blocks which is not getting accessed is deleted.
+ideally what should be replication factor
+
+
+if 65 data comes for 64 mb block, 64 mb data will go in 1st block, and 2nd block will be just 1 mb to not waster space.
+only the last block size can vary
+
+blocks distribution on datanodes is random with few algorithm principles:
+1) store data on nearest node from client
+2) load on datanode. if slave is too busy, then less blocks will be stored on that machine
+3) hadoop is rack aware.
+
