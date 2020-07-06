@@ -213,7 +213,41 @@ spec:
     - containerPort: 80
 
 
+service yml
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: httpd-service
+spec:
+ ports:
+ - port: 9999
+   targetPort: 80
+   nodePort: 31000
+   protocol: TCP
+ selector:
+  app: httpd-app
+ type: NodePort
+ 
+ With type cluster IP, all cluster are available at single IP. with nodeport type you define a nodeport as well
 
+zero downtime deployment example is blue green delpoyment for node's application upgrade where old nodes are kept running and new node cluster is added
+in external load balancer.
+
+to establish ssh public private key pair
+it generates key id_rsa and id_rsa.pub
+$ ssh-keygen
+
+copy id_rsa.pub to authorized_keys file in slave /root/.ssh/.
+
+[root@masterdevops .ssh]# vi /etc/ssh/sshd_config
+set PermitRootLogin to yes and restart sshd
+[root@masterdevops .ssh]# systemctl restart sshd
+
+
+to install ansible
+yum install epel-release
+yum install ansible
 
 
 
