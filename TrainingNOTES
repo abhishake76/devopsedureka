@@ -189,6 +189,8 @@ spec:
 
 
 Deployment definition: 
+akms
+appVersion, kind, metadata, specs
 
 ---
 apiVersion: apps/v1
@@ -248,6 +250,60 @@ set PermitRootLogin to yes and restart sshd
 to install ansible
 yum install epel-release
 yum install ansible
+define ansible groups in /etc/ansible/hosts
+[all]
+
+ansible module command
+ansible -m <module> -a <args> <group>
+ansible -m <ping> <group>
+
+ansible -m copy -a "src=/tmp/ansibletest.txt dest=/root" webserver
+it overwrite file only if chksum is different
+chksum filename    to see change in file timestamp
+
+ansimble -m yum to install packages on remote worker server
+ansible -m service to start/stop/status manage services
+
+write playbook in yaml to include all the tasks in ansible
+execute playbook to run all commands in one go
+playbooks > play > tasks > modules
+
+---
+- hosts: webserver
+  tasks:
+  - name: Checking the PING on all webservers
+    ping: 
+  - name: Install HTTPD package
+    yum: name=httpd state=present
+  - name: Start HTTPD service
+    service: name=httpd state=started
+  - name: Copy an application file
+    copy: src=/tmp/ansibletest.txt dest=/var/www/html/
+
+check syntax playbook
+ansible-playbook httpd-playbook.yml --syntax-check
+   
+dry run 
+ansible-playbook --check httpd-playbook.yml
+
+run playbook
+ansible-playbook httpd-playbook.yml
+
+
+downloading roles
+https://galaxy.ansible.com/t
+
+ansible-galaxy install geerlingguy.mysql
+installed in /root/.ansible/roles/geerlingguy.mysql/
+create your own role
+cd /etc/ansible/roles
+
+ansbile-galaxy init httpd-role
+above command creates httpd-role directory for difining our custom role.
+
+
+
+
 
 
 
