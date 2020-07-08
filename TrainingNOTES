@@ -255,6 +255,10 @@ define ansible groups in /etc/ansible/hosts
 
 ansible module command
 ansible -m <module> -a <args> <group>
+
+
+
+
 ansible -m <ping> <group>
 
 ansible -m copy -a "src=/tmp/ansibletest.txt dest=/root" webserver
@@ -266,8 +270,10 @@ ansible -m service to start/stop/status manage services
 
 write playbook in yaml to include all the tasks in ansible
 execute playbook to run all commands in one go
-playbooks > play > tasks > modules
 
+roles > playbooks > play(s) > tasks > modules
+
+playbook can be contain mutiple plays
 ---
 - hosts: webserver
   tasks:
@@ -293,13 +299,50 @@ ansible-playbook httpd-playbook.yml
 downloading roles
 https://galaxy.ansible.com/t
 
+yum install tree to see list of file in tree directory
+
 ansible-galaxy install geerlingguy.mysql
 installed in /root/.ansible/roles/geerlingguy.mysql/
 create your own role
 cd /etc/ansible/roles
-
+Make role directory in /etc/ansible/roll like httpd-role and for eg init role http to understand
 ansbile-galaxy init httpd-role
 above command creates httpd-role directory for difining our custom role.
+mutiple directory gets created with each directory having main.yml to do some specfic operations
+primary file for role is tasks/main.yml
+copy playbook definition in this main.yml.
+change file source to relative directory with respect to files directory.
+so files directory in httpd-role is source directory for files.
+---
+# tasks file for httpd-role
+- name: Checking the PING on all webservers
+  ping:
+- name: Install HTTPD package
+  yum: name=httpd state=present
+- name: Start HTTPD service
+  service: name=httpd state=started
+- name: Copy an application file
+  copy: src=ansibletest.txt dest=/var/www/html/
+
+use role in playbook.
+---
+- hosts: webserver
+  roles:
+    - httpd-role
+
+you can use variable inside vars configuration section with internal definition or as an external variable
+---
+- hosts: webserver
+  vars:
+    filename1: ansibletest.txt
+    filename: "{{efilename}}"
+  tasks:
+  - name: Copy an application file
+    copy: src=/tmp/{{filename}} dest=/var/www/html/
+  
+  extrenal defnition
+  ansible-playbook httpd-playbook.yml -e "efilename=ansibletest.txt1"
+
 
 
 
