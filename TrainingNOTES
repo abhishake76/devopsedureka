@@ -1,4 +1,7 @@
 
+https://github.com/iamdevopstrainer/ github location  for devops training
+https://github.com/abhishake76/devopsedureka my github
+
 Edit firewall options for http to allow custome port like 8080 8090
 
 Add for SELinux policy custom port for http tomcat to OS 
@@ -346,7 +349,10 @@ you can use variable inside vars configuration section with internal definition 
 
 
 
+monitoring tool
+grafana premises
 
+jenkins poll Scm to trigger pipleline with a cron job H**2
 
 
 
