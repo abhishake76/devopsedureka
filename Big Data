@@ -58,4 +58,8 @@ blocks distribution on datanodes is random with few algorithm principles:
 2) load on datanode. if slave is too busy, then less blocks will be stored on that machine
 3) hadoop is rack aware.
 
+FINISH the quizes on datdalfair nexttel LMS.
+
+Q.I installed hadoop sucessfully. during jps command datanode is not displaying
+A: stop hadoop services >> delete hdata dir >> format NN bin/hdfs namenode -format >> start services again
 
