@@ -129,6 +129,11 @@ This minim;izes network congestion
 hdfs provides interfaces to move application closer to nodes where data is located.
 
 
+While executing a mapreduce job on hadoop, for virtual limit exception change in map-site.xml yarn entry to local.
+
+
+
+
 
 
 
