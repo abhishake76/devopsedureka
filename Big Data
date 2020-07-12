@@ -59,7 +59,49 @@ blocks distribution on datanodes is random with few algorithm principles:
 3) hadoop is rack aware.
 
 FINISH the quizes on datdalfair nexttel LMS.
+HOW to enable trash in hadoop?
 
 Q.I installed hadoop sucessfully. during jps command datanode is not displaying
 A: stop hadoop services >> delete hdata dir >> format NN bin/hdfs namenode -format >> start services again
+
+to show all commands
+$ hadoop fs
+
+to create dir
+$ hadoop fs -mkdir /data001
+
+files cannot be edited in hdfs, but files can be appended with appentToFile command
+$ hadoop fs -appendToFile temp /data004/hdfs-site.xml
+
+
+For small files say size 1 MB, block size will be same as file size. The block size shown on GUI is cluster Block size configured.
+
+
+
+Map Reduce:
+1) Used when user request for some data from hdfs
+2) Request will be divided into mutiple tasks with each task being served by mapper. Each mapper tries to serve data from local node.
+3) HDFS block with key, value pair of byteoffset and value is input to mapper. Map function receives one key-value pair at a time.
+4) Output from mapper is called intermediate output and again contain proecssed key value pairs. Mapper output is stored on local disk and not in hdfs.
+5) User write the custom program for map
+6) Mutiple map function will run on different nodes for each request
+7) Intermediate output in form of key, value pair is send to Reducer(s) which can be run one of the nodes running map function.
+8) The same key with mutiple values from different mappers is fed into one Reducer as Reducer aggregate values of same key from different mappers.
+9) The reducer output is again key.value pair and this final output is stored in hdfs system
+10) This final output is then send/streamed back to client
+11) We can configure this output file to be retained or deleted.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
