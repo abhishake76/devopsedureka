@@ -1,3 +1,6 @@
+
+WRITETOSHARAT@GMAIL.COM
+
 car auto disagnostic scan tool
 
 OBD app on phone
@@ -24,4 +27,9 @@ Sensors come with C libraries which can be used to read data.
 
 program ca be uploaded from this ide to arduino board.
 you can see output of sensor in ide console.
+
+PIR sensor for infrared spectrum reading
+
+
+
 
