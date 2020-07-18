@@ -1,8 +1,13 @@
 
 WRITETOSHARAT@GMAIL.COM
 
-car auto disagnostic scan tool
+With sensehat on pi 4, pi does not boot up without a hdmi connectivity.
+Hack
+# uncomment if hdmi display is not detected and composite is being output
+hdmi_force_hotplug=1
 
+
+car auto disagnostic scan tool
 OBD app on phone
 
 opencb, tensor flow, cloud services azure cognitive services, vision, speech, emotions etc for image identification
@@ -29,6 +34,30 @@ program ca be uploaded from this ide to arduino board.
 you can see output of sensor in ide console.
 
 PIR sensor for infrared spectrum reading
+
+sense hat is fit on gpio pins. General purpose input output pins
+You can control voltage in each pin with a program on rapberry pi.
+
+I can switch the ked by supplying 3v from gpio pin.
+
+If i need to run motor of 12 volts, there is not enough power from pi that can be given to motor.
+We use motor shield for this puropse with relays on top of pi with 12 volt power supply.
+
+Shields have their own memory EEP ROM. The funtions of shields are already defined in shield.
+SHield has 2 important properties seiral data (ID_SD) and serial clock(ID_SC).
+As soon as shield is put on top of pi, it start drawing power from pi
+And through data and clock pins, shielids like HAT will push inbuilt programs (dtf code) to pi.
+Pi use these program functions to run shield functions.
+
+Shields are used mostly for development.
+And then design is productized as chips or cheaper solution with transistors/resistors.
+
+install sense hat emulator, if required
+sudo apt-get install python-sense-emu python3-sense-emu python-sense-emu-doc sense-emu-tools -y
+
+You import different lib for sense hat and sense emu
+sense hat: from sense_hat import SenseHat
+sense emulator: from sense_emu import SenseHat
 
 
 
