@@ -157,7 +157,7 @@ It selects the file from hdfs store and defines the input SPLIT for reading
 4) RecordReader keeps giving one key-value pair to Map class till entire split is processed.
    For each split/block their is a mapper
 5) Map result key-value pairs from local disk are comibned by combiner and sent to Paritioner class. 
-   Partitioner takes hashvalue of key and all paritioner send same hashvalue/keys data to same reducer node
+   Partitioner takes hashvalue of key and all paritioner send same hashvalue(range)/keys data to same reducer node
    The process of moving map output to reducer is known as shuffling
    Shuffling is physcial movement of map results to reducer node.
    As soon as first map task is finished, shuffling starts and data is sent to reducer
