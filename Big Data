@@ -131,6 +131,63 @@ hdfs provides interfaces to move application closer to nodes where data is locat
 
 While executing a mapreduce job on hadoop, for virtual limit exception change in map-site.xml yarn entry to local.
 
+For any class to be "value" for map and reduce class, it has to implement org.apache.hadoop.io.Writeable
+Two methods for overwrite
+1) write (DataOutput out)
+2) readFields (DataInput in)
+
+For any class to be "Key" for map and reduce class, it has to implement org.apache.hadoop.io.WriteableComparable
+Three methods for overwrite
+1) write (DataOutput out)
+2) readFields (DataInput in)
+3) compareTo(To)
+
+Process of Map Reduce
+1) InputFormat is a class(component )defines how input file is divided and read.
+It selects the file from hdfs store and defines the input SPLIT for reading
+2) Split is a unit of mapreduce data processing and is a logical representation of a block on hdfs
+   Block is physical unit of hdfs.
+   Hadoop undersand line boundaries. 
+   Lines are not divided between two blocks.
+   It terminates the block size to previuos line where size of data is small than block size.
+   With xml, it stores as multi line record
+   A split will take data from one block but might read partial data from other block(local/remote) to get complete record.
+   Therefore Split is logical record boundary and block is physical data boundary
+3) RecordReader (RR) is the class that read each split i.e. read data from hdfs.
+4) RecordReader keeps giving one key-value pair to Map class till entire split is processed.
+   For each split/block their is a mapper
+5) Map result key-value pairs from local disk are comibned by combiner and sent to Paritioner class. 
+   Partitioner takes hashvalue of key and all paritioner send same hashvalue/keys data to same reducer node
+   The process of moving map output to reducer is known as shuffling
+   Shuffling is physcial movement of map results to reducer node.
+   As soon as first map task is finished, shuffling starts and data is sent to reducer
+   Shuffling is limited by network badnwidth so 10 Gig connection is recommended for intra node connection
+6) Sorting is done on key value pairs from paritnioner
+7) One Sorted key with mutiple values are given to one Reducer
+8) Output of reducer is written to hdfs via outputformat class
+   Output format class defines the way how key value pairs will be written to output files.
+   Output format decides the location/block where results will be written
+9) RecordWriter is the actual class which writes teh reduced task output to persistent hdfs store
+   It write one key-value pair at a time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
