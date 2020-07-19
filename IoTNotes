@@ -1,5 +1,6 @@
 
 WRITETOSHARAT@GMAIL.COM
+sharat.kanthi@gmail.com
 
 With sensehat on pi 4, pi does not boot up without a hdmi connectivity.
 Hack
@@ -41,7 +42,8 @@ You can control voltage in each pin with a program on rapberry pi.
 I can switch the ked by supplying 3v from gpio pin.
 
 If i need to run motor of 12 volts, there is not enough power from pi that can be given to motor.
-We use motor shield for this puropse with relays on top of pi with 12 volt power supply.
+We use motor shield for this puropse with relays on top of pi.
+The relays increase the voltage from 3v to 12 v
 
 Shields have their own memory EEP ROM. The funtions of shields are already defined in shield.
 SHield has 2 important properties seiral data (ID_SD) and serial clock(ID_SC).
@@ -58,6 +60,50 @@ sudo apt-get install python-sense-emu python3-sense-emu python-sense-emu-doc sen
 You import different lib for sense hat and sense emu
 sense hat: from sense_hat import SenseHat
 sense emulator: from sense_emu import SenseHat
+
+Python reference
+w3school python programming
+use raspberry pi ide idle(builtin), thonny(builtin) or pycharm
+
+Sense Hat API link
+https://sense-emu.readthedocs.io/en/v1.0/api.html
+
+Strong board ESP8266 with wifi and act as computer
+PLace it on top of node mcu. You can power it with 3 batteries generating 4.5 v
+So any sensor like BLC with serial connection and no internet connectivity can be plougged with node mcu to get internet connectivity
+
+
+MGD is popular media server for video handling
+
+vnc username/password for raspberry is:
+username: pi
+password: abhi  (default: raspberry)
+port: 3389 is default port for vnc
+
+use firefox ESR for elenium on automation on raspberry pi
+
+use port forwarding on wifi router to connect to raspberry pi application.
+
+Volatile memory is computer storage that only maintains its data while the device is powered. ... 
+Volatile memory contrasts with non-volatile memory, which does not lose content when power is lost. 
+Non-volatile memory has a continuous source of power and does not need to have its memory content periodically refreshed.
+
+RFID has non volatile memory wiht some programmable logic in IC to transmit/receive data.
+when rfid antenana coil is subjected to magnetic field, it induces electrcity.
+This current passed to IC on RFID and it transmits data with programming logic after receiveing current.
+
+Active RFID tag will have battery powered circuit for longer range transmission.
+
+Battery assisstive Passive tag is one where battery is there but only activated once RFID comes near a reader
+
+Motor/actuator helps in physical movement of things
+Tower Pro and Servo motor are two strong small motors.
+Servo motots has fast moving motors and lot of gears.
+These mitiple gear wheels converts lot of speed into a high toruque.
+
+Sensor helps in sensing/reading data from things
+
+
 
 
 
