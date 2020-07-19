@@ -13,3 +13,8 @@ A random-access data file enables you to read or writeinformation anywhere in th
 In a sequential-access file, you can only read and write information sequentially, starting from the beginning of the file.
 Both types of files have advantages and disadvantages. If you are always accessing information in the same order, a sequential-access file is faster.
 If you tend to access information randomly, random access is better. Random access is sometimes called direct access.
+
+EC2 instance AMI cant store root data on Instance Store or EBS storage.
+Instance store is ephemeral storage. 
+Ephemeral storage is the volatile temporary storage attached to your instances which is only present during the running lifetime of the instance. 
+In the case that the instance is stopped or terminated or underlying hardware faces an issue, any data stored on ephemeral storage would be lost
