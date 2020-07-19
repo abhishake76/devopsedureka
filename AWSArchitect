@@ -18,3 +18,6 @@ EC2 instance AMI cant store root data on Instance Store or EBS storage.
 Instance store is ephemeral storage. 
 Ephemeral storage is the volatile temporary storage attached to your instances which is only present during the running lifetime of the instance. 
 In the case that the instance is stopped or terminated or underlying hardware faces an issue, any data stored on ephemeral storage would be lost
+With EBS root volume is deleted on termination of EC2 instance but not across stops. 
+But you can configure for root volume to be persisted even on deletion of EC2 instance.
+
