@@ -103,8 +103,12 @@ These mitiple gear wheels converts lot of speed into a high toruque.
 
 Sensor helps in sensing/reading data from things
 
+Temp sensor code: https://www.raspberrypi-spy.co.uk/2015/04/bmp180-i2c-digital-barometric-pressure-sensor/#prettyPhoto
 
+In LED smaller wire is negative, bigger (bent) wire is positive
 
+GPIO Pins programming - RPI: https://www.makeuseof.com/tag/raspberry-pi-control-led/
 
-
+DO MODULE 1,2 and 4. DO LABS
+https://azure.microsoft.com/en-in/free/
 
