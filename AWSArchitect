@@ -1,1 +1,15 @@
-NAT Gatways are chargeable. See NAT gaeway pricing
+NAT Gatways are chargeable. See NAT gaeway pricing..about 0.06$ per hour
+
+Subnet vs ROutes vs NAT vs Internet Gway vs VPC
+
+Elastic IPs (Public IPs) are free to acquire but if they are not used for active instance, there is a panelty of 0.02$ per hr
+
+EC2 instance soft limit for a single image ia 100. All limits are soft as they can be increased by talking to AWS.
+
+Random  reads are done from Solid state drive and Sequential from normal Hard disk drive.
+OS is deployed on SSD and DB is deployed on HD.
+The terms random access and sequential access are often used to describe data files. 
+A random-access data file enables you to read or writeinformation anywhere in the file. 
+In a sequential-access file, you can only read and write information sequentially, starting from the beginning of the file.
+Both types of files have advantages and disadvantages. If you are always accessing information in the same order, a sequential-access file is faster.
+If you tend to access information randomly, random access is better. Random access is sometimes called direct access.
