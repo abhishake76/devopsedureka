@@ -21,3 +21,7 @@ In the case that the instance is stopped or terminated or underlying hardware fa
 With EBS root volume is deleted on termination of EC2 instance but not across stops. 
 But you can configure for root volume to be persisted even on deletion of EC2 instance.
 
+HMV vs PV write more
+
+
+Every AMI image has a default username
