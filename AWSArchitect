@@ -23,5 +23,46 @@ But you can configure for root volume to be persisted even on deletion of EC2 in
 
 HMV vs PV write more
 
-
 Every AMI image has a default username
+
+Read VPC, Submet, Route, Firewall.
+Read volume mounting, RAID 0 to improve disk IO peformance.
+Read file systems like XFS etc
+Study type of load balancer, application layer 7, network, classic layer 4
+
+What is Provisioned IOPs? WHat happens when you extend disk size?
+Steps to attach EBS volume in /dev/xvdf
+1)To check file system on new EBS volume:
+  sudo file -s /dev/xvdf
+  TO create xfs file system
+  sudo mkfs -t  xfs /dev/xvdf
+2) sudo mount /dev/xvdf/ /root/mydata
+3) lsblk to see all volumes on disk
+
+EBS can be attached to only 1 instance. EFS can be attached to mutiple instance
+
+TO attahc EFS
+1) yum install nfs-utils
+2) mount -t nfs4 <efs-domainname>:/ <local-dir>/
+3) Make mount permanent by making entry into /etc/fstab
+   <efs-domainname>:/ <local-dir>/     nfs4   _netdev 0 0
+
+EBS: ELastick Bean Stalk
+Url to obtain instance metadata:
+http://169.254.169.254/latest/meta-data/
+or
+http://169.254.169.254/latest/user-data/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
