@@ -73,6 +73,11 @@ Network ACL is Stateless changes applied to incoming will not be applied to Secu
 Network ACL rules are applied in order, with rules with lower number processed first.
 
 
+in ELB, Search Results
+Featured snippet from the web
+When Connection Draining is enabled, Auto Scaling will wait for outstanding requests to complete before terminating instances. 
+You can enable Connection Draining via the AWS Management Console, API, or Command Line Interface (CLI), as well as AWS CloudFormation
+
 
 
 
