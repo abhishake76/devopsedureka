@@ -53,10 +53,24 @@ http://169.254.169.254/latest/meta-data/
 or
 http://169.254.169.254/latest/user-data/
 
+Every image has a default user name. You can connect through ssh with key pair. 
+Default username are listed at aws docs in connection prerequisites
+mobaxterm is a good remote connectivity/ ssh client.
 
+ssh on  client can use pem key with -i option, but putty will need puttyhen to generate ppk private key to connect
 
+Snapshot lifecylce policy is chargeable.
+Snapshot volumes are stored on S3 storage and are charged as per volume size.
 
+Internal load balancer for multi tier architecture can also be created in classic load balancer.
 
+community.simplilearn.com https://community.simplilearn.com/threads/aws-solution-architect-associate-pranav.52895/
+
+classic load balancer works in round robin manner
+
+Security Group is Stateful, any changes applied to an incoming rules is automatically applied to an outgoing rule. 
+Network ACL is Stateless changes applied to incoming will not be applied to Security Group
+Network ACL rules are applied in order, with rules with lower number processed first.
 
 
 
