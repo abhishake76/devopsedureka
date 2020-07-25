@@ -83,6 +83,18 @@ freenom.com to get a free domain name
 
 Joomla, Wordpress, Magento 3 copies of content management to test ELB
 
+Route 53 and traffic policy is paid service.
+
+S3 is like google drive i.e. shared drives for sharing content
+Object in S3 cannot be greater than 5 Tb in size''
+in free tier we can store 5 gb of data. after 5 gb, we are charged.
+S3 price depends on size of object, read write operations number, classes used, region where S3 resides
+
+
+
+
+
+
 
 
 
