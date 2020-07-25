@@ -187,6 +187,23 @@ write hadoop command to execute a jar file for map reduce.
 
 work on MovieAnalysis Project and HR_Analysis Doc.
 
+Impala is a MPP (Massive Parallel Processing) SQL query engine for processing huge volumes of data that is stored in Hadoop cluster. 
+It is an open source software which is written in C++ and Java. 
+It provides high performance and low latency compared to other SQL engines for Hadoop.
+
+YARN:
+ResourceManager daemon on master Node.
+NodeManager daenon on slave nodes 
+ApplicationMaster is triggered every time a new MapReduce job is triggered
+Resource Manager will talk to Node Manager to trigger a application master in a container on slave node.
+Resource manager gives containers to application to run. Container is like a memory space and cpu allocatio like 1G, 1 CPU.
+Application Master will request RM for one or more containers to run applications which RM will coordinate with NM to allocate more containers.
+
+Kerberos is a computer network security protocol that authenticates service requests between two or more trusted hosts across an untrusted network
+Kerberos authentication is currently the default authorization technology used by Microsoft Windows, 
+and implementations of Kerberos exist in Apple OS, FreeBSD, UNIX, and Linux.
+
+
 
 
 
