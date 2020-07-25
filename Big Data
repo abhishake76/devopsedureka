@@ -174,6 +174,18 @@ It selects the file from hdfs store and defines the input SPLIT for reading
 9) RecordWriter is the actual class which writes teh reduced task output to persistent hdfs store
    It write one key-value pair at a time.
 
+Note for MapReduce you can customize RecordReader, Mapper (setup, clean, map, combiner), Parition, Reducer(), XMLInoutFormat, XMLOUtputFormat class.
+
+Use jdom in Map Reduce for aml reading as it has simplicity of dom and quick performance of SAX.
+
+FInd best reader for json in MapReduce
+
+org.apache.hadoop.filecache.DistributedCache to get set metadata to distributed cache on alll nodes.
+org.apache.hadoop.filecache.DistributedCache.addFiletoClassPath method to add jars to classpath
+
+write hadoop command to execute a jar file for map reduce.
+
+work on MovieAnalysis Project and HR_Analysis Doc.
 
 
 
