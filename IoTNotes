@@ -112,3 +112,37 @@ GPIO Pins programming - RPI: https://www.makeuseof.com/tag/raspberry-pi-control-
 DO MODULE 1,2 and 4. DO LABS
 https://azure.microsoft.com/en-in/free/
 
+MQTP and AMQP: AMQP is queing based protocol whereas MQTP is send message and forget kind of protocol
+
+CloudMQTT.com platform to do IOT communication which provides endpoint to enable communication.
+
+MGD is a media server
+Azuere IOT hub can handle inense data with thousands of IOT whereeas MQTT is lightweight for mmore quick communication.
+
+HiveMQ is free end point provider.
+
+
+MosquiotMQTTBroker is a popular messsage broker which you can install on your computer or Pi for IOT communication
+
+
+Say through a prorgam you send a message to microprocessor or microcontroller to switch on light, The MP/MC is connected to sensor thorugh pin.
+THe MP/MC will send  voltage to a pin which trigger the relay and relay will switch on light.
+The relay just complete the circuit. The motor will have its own independent power.
+Transistor can also be used in place of relay. But relays are more reliable and does not heatup as muc as transistors.
+
+
+
+google cloud developers service account
+iotserviceaccount@iotproject-284404.iam.gserviceaccount.com
+
+study ac to dc difference how 12 v dc maps to 220v AC current
+
+
+
+
+
+
+
+
+
+
