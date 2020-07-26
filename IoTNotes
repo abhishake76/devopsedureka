@@ -137,6 +137,30 @@ iotserviceaccount@iotproject-284404.iam.gserviceaccount.com
 
 study ac to dc difference how 12 v dc maps to 220v AC current
 
+Communcation between MC and client:
+1)Wired from sensors to MC to client. Reader provided power to MC and sensors
+2) Wireless from MC to network. 2.4 Ghz normal frequency with lower range. Frequency is high so more data can be transferred.
+a) Short Range: BT, Wifi, 6LoWPAN(116 meter range works on IPv6), Zigbee(100m)
+   Short Range ZigBee and LoWPAN allow us to create mesh network like smart connectivity inside multiple floor building with modules on different floor acting as intermediate gateway.
+   BT becomes more energy efficient with BLE(Bluetooth low energy) Release 4 as it was not in alaways connected but only on need or periodically
+   BLE 4 increase Bluetooth module with imprved header with dsitance and periodic connectivity increases BT module life to 4-5 years
+   Wifi 802.11ah HaLow is for IOT devices with low frequency 900 mhz vs 2.4-5 Ghz for normal wifi. This increases range.
+   Normal wifi module in phone and laptop will not connect to Halow.
+   ESP8266 wifimodule supports 802.11ah frequency
+   Zigbee operatres on 868 Mhz, 915 MHz and 2.4 Mhz with low intesity data and range from 10 m normally to 100m
+   There is LTE stack for 6LoWPAN as well which use 800-900 Mhz
+b) Long Range: LPWAN 10-12 km. Frequency from 200 - 900 MHz
+   i) Laura Gateway
+   ii) Sigfox (French)
+   ii) NBIOT (Airtel,Vodaphone is providing it)
+       NBIOT is now used as it can be shared and made public.
+       Lora and Sigfox are outdated as their network is private and is expensive to manage local network.
+       Some NBIOT module comes with integrated SIM with 3G/4G or you can put external SIM.
+       NBIOT works on low frequency and high wavelength giving more range.
+       With low frequency, we transfer limited data with special SIM cards
+       There NB-IOT module for arduino board.
+       
+   
 
 
 
