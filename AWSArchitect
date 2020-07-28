@@ -90,11 +90,26 @@ Object in S3 cannot be greater than 5 Tb in size''
 in free tier we can store 5 gb of data. after 5 gb, we are charged.
 S3 price depends on size of object, read write operations number, classes used, region where S3 resides
 
+S3 replication acros region when enabled, only replicate files that are uploaded/updated after replication is activated.
 
 
+Cloutwatch freee monitoring for 5 minutes
+Cloutwatch paid monitoring is 3.5 usd per instance.
 
 
+Weight distribution of AWS associate examp topics:
+1) 35-40% Resilient Architecture: Route 53, Auto Scaling, ELB, HC, Health Check
+2) 30% - Performant architecture: EBS, EC2 instance type, S3 class, S3 properties
+3) 10% IAM
+4) 10% VPC
+5) Databse services: 10%
 
+
+nkheria@gmail.com Neeraj mail
+
+Cloudwatch dashboard is paid service.
+Event rule notification is only for certain events.
+Alarm notification is for all metrics like CPU, network stats etc
 
 
 
