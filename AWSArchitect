@@ -104,12 +104,61 @@ Weight distribution of AWS associate examp topics:
 4) 10% VPC
 5) Databse services: 10%
 
+Send email from AWS
+easymail7.com in house marketing  software
+
+emclient.com integrated with amazon.
+
+https://docs.aws.amazon.com/ses/latest/DeveloperGuide/send-email-smtp.html?icmpid=docs_ses_console
 
 nkheria@gmail.com Neeraj mail
 
 Cloudwatch dashboard is paid service.
 Event rule notification is only for certain events.
 Alarm notification is for all metrics like CPU, network stats etc
+
+lambbda function for notification
+var aws = require('aws-sdk');
+var ses = new aws.SES({
+ region: 'us-east-1'
+});
+exports.handler = function(event, context) {
+ console.log("Incoming: ", event);
+ // var output = querystring.parse(event);
+ var eParams = {
+ Destination: {
+ ToAddresses: [" "] //give the email ID which is verified by SES
+ },
+ Message: {
+ Body: {Text: {
+ Data: "An object has been added to S3 bucket!"
+ }
+ },
+ Subject: { Data: "Mail from SES"}
+ },
+ Source: " //give the email ID which is verified by SES
+ };
+ console.log('===SENDING EMAIL===');
+ var email = ses.sendEmail(eParams, function(err, data){
+ if(err) console.log(err);
+ else {
+ console.log("===EMAIL SENT===");
+ console.log(data);
+ console.log("EMAIL CODE END");
+ console.log('EMAIL: ', email);
+ context.succeed(event);
+ }
+ });
+}
+
+Lambda:
+Max execution time for a function:900s
+Max size for a function package: 250 MB
+Max size of alll bundled pacakage in region: 75 GB
+Reference link:
+https://aws.amazon.com/blogs/opensource/java-apis-aws-lambda/
+
+
 
 
 
