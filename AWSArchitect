@@ -158,7 +158,16 @@ Max size of alll bundled pacakage in region: 75 GB
 Reference link:
 https://aws.amazon.com/blogs/opensource/java-apis-aws-lambda/
 
+DynamoDb
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AppendixSampleTables.html#AppendixSampleData.ProductCatalog
+Java connectivity wiht dynamodb
+https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/AppendixSampleDataCodeJava.html
+
+MysqlDb doc
+https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_GettingStarted.CreatingConnecting.MySQL.html
 
 
+
+;
 
 
