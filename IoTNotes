@@ -160,12 +160,54 @@ b) Long Range: LPWAN 10-12 km. Frequency from 200 - 900 MHz
        With low frequency, we transfer limited data with special SIM cards
        There NB-IOT module for arduino board.
        
-   
+       
+Zigbee protocol range for 10m to 100 m.
+Initial major vendor for small IOT cips.
+XBee chip for zigbee was inserted in device.
+It provided ZCL Zigbee cluster librarary to do basic functions like turn onoff
+Vendors add functions for their device using ZCL and its very popular for factory automation, homeautomation and electronics   
+Xbee chips are very low power consuming as its not always on
+XBee will come online and send data back to zigbee coordinator.
+Same Xbee chip can act as coordinator, router or end device.
+Connect through FDDI programmer.
+Raspberry PI can have zigbee simulator and can control zigbee devices but cannot pe part of zigbee network
+YOu can run AT commands or use XCTU
+XCTU: Programming platform for Zigbee network
 
 
+Delll 5000 edge router/gateway which has both edge routing capability such LORA/NBIOT etc and with main internet routing capability.
 
 
+NBIOT(LTE), LTE CAT-0, CAT-1 for IOT. 
+CAT-1 is only fully cellular IOT option at this moment(check on internet).
+CAT -1 comes online only when required
+FUll duplex supported 2 way communication in CAT-1
+Half Duplex means only 1 way communication supported
+CAT is more capabale and featuristic than NBIOT.
+NBIOT supports basic communication with smaller packets and larger range
+When you need capabilities supporting multiple devices you can go for LTE CAT for large amount of continuous data transfer
+LTE Cat 0, Cat 1, LTE -M , NBIOT is the generation evolution of IOT communication specifications
 
+
+DIGI is the leading provider of IOT devices.
+DIGI manufacture cellular chips/devices which can insert IOT SIM and act as bridge for IOT communication.
+
+
+ALll below LPWAN comapnies/vendors need unlicensed frequency range
+LORA(Long Range) 710-720 Mhz, full duplex, 3oo bps to 50 kbps. Long lasting life.
+SigFox(france): 868(Europe) 915 MHz(US) 100bps 5-25 km
+WeightLess (Ubik): 800-810 100 bps 5 km in urban area
+NBIOT
+
+HTTP can be used for IOT communication but its a heavy restful protocol.
+COAP(Constrained Application Protocol) is like a lightweight HTTP is used with 6LoWPAN over UDP.
+Other messaging protocols MQTT, AQMP are used for IOT communication
+
+
+PAHO, Mosquito is the broker for MQTT
+AMQP is slower protocol than MQTT.
+AMQP is used by NASA and Aadhar.
+AMQP is more resilient than MQTT
 
 
 
