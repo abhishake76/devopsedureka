@@ -275,12 +275,31 @@ Roller Coaster Analyis. Get some queries in this project using UDF.
 How to change Metastore configuration to MySQL database?
 
 
+FLume is for provide streaming data to hdfs.
+TIBCO is another streaming data provider but not as popular as FLUME for HDFS
+JDBC channel is very slow and not used.
+Memory channel is very fast but volatile so memory data can be lost because of failures like power, crashes etc
+FIle channel for lot of data being pushed.
+IPC(Inter process Communcation) sink for agene to agent communication: Eg Avro
 
 
+Flume collector is deployed in staging server which is installed at(just before) firewall in data center.
+Flooding of data can bring down the staging server but database/hadoop will not be affected
+One cluster of haddop can also be made at staging server which acts as storage cluster
+Another hadoop cluster inside the data center which stores active data required for compute.
+Relevant data from Storage cluster is send to compute cluster.
 
+Ganglia or customized monitoring system are used for Flume.
 
-
-
+Pig is a high level general data flow language
+Developed by Yahoo
+Hive developed by Facebook
+To work in PIG, I need to learn another high level language whereas in Hive I can use SQL.
+SO hive is more popular.
+Pig can handle unstructured data so I will use Pig when unstructured data is to be processed.
+Map Reduce programs will use for enterprise processing as it gives more granular control.
+PIG is defunct now. No release on PUG after 2017. 
+Install latest version of PIG 0.17 version and also set JAVA_HOME, and set correct path for Hadoop conf path hadoop/etc/hadoop
 
 
 
