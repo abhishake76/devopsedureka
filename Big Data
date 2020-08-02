@@ -301,13 +301,28 @@ Map Reduce programs will use for enterprise processing as it gives more granular
 PIG is defunct now. No release on PUG after 2017. 
 Install latest version of PIG 0.17 version and also set JAVA_HOME, and set correct path for Hadoop conf path hadoop/etc/hadoop
 
+Azure IOT hub
+AWS Device Twin (or Device Shadow in AWS) is a copy of actual device having meta data of actual device.
+Physcial Device/senosr sends the sensed data like Temp to Twin Device.
+Rather than using MQTT we use device twin approach for secutiry, using cloud services, reliability of data transfer.
+Twin device communicates with Physical device with SAS token for security
+
+Microsoft also give devices which can directly communicate wihtout twin device with Device provisionin service.
+Azure also provide firmware which you can put on your chip which will help physical  device to directly communicate wihtout twin device.
+
+IOT 10 Edge is OS for IOT client gateway(like Raspberry Pi as edge Micro Processor) for sensors which will preprocess data from sensors and then send data to cloud.
+IOT Gateway can be Raspberry PI with processing or wihtout processing like nodeMCU.
+
+IOT protocol gateway is a fraemwork for IOT communication
 
 
+on raspberry pi
+pip install azure-iot-device
+https://docs.microsoft.com/en-us/azure/iot-hub/quickstart-send-telemetry-python
 
+wget code.link
 
-
-
-
+Put device endpoint connection string in code.
 
 
 
