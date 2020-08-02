@@ -301,28 +301,47 @@ Map Reduce programs will use for enterprise processing as it gives more granular
 PIG is defunct now. No release on PUG after 2017. 
 Install latest version of PIG 0.17 version and also set JAVA_HOME, and set correct path for Hadoop conf path hadoop/etc/hadoop
 
-Azure IOT hub
-AWS Device Twin (or Device Shadow in AWS) is a copy of actual device having meta data of actual device.
-Physcial Device/senosr sends the sensed data like Temp to Twin Device.
-Rather than using MQTT we use device twin approach for secutiry, using cloud services, reliability of data transfer.
-Twin device communicates with Physical device with SAS token for security
-
-Microsoft also give devices which can directly communicate wihtout twin device with Device provisionin service.
-Azure also provide firmware which you can put on your chip which will help physical  device to directly communicate wihtout twin device.
-
-IOT 10 Edge is OS for IOT client gateway(like Raspberry Pi as edge Micro Processor) for sensors which will preprocess data from sensors and then send data to cloud.
-IOT Gateway can be Raspberry PI with processing or wihtout processing like nodeMCU.
-
-IOT protocol gateway is a fraemwork for IOT communication
+HBASE is a columnar database with column families 
+Based on google Big Table. Hadoop is based on Google File system
+Hbase storage is key-value format
+Hbase is very performant 
+Facebook profile pictures, messaging window is on top of hbase
+Casandra was competitor of hbase and developed at Facebook and open sourced.
+Casandra was not giving good results for facebook requirements so they moved to Hbase
+COlumns in Hbase created on fly 
+HBase store data in HDFS
+Hive can work on top of HBase.
+Hbase store timestamp with each and every value
 
 
-on raspberry pi
-pip install azure-iot-device
-https://docs.microsoft.com/en-us/azure/iot-hub/quickstart-send-telemetry-python
+Flume is popular and sqoop is dying as most of enterprise products are providin thier native ETL tools
+Sqoop uses MapReducejob to transfer data between hadooop and external stores like RDBMS
+About 10 years back, Sqoop was used to import data from RDBMS into HDFS, transform data in Hadoop Mapreduce, and then export data bakc in RDBMS for reporting
+But now hadoop has connectvity with most of the reporting tools
+Sqoop can be used to populate tables in Hive or Hbase
 
-wget code.link
+Assignment:
+1) How to give Hbase table as an input to mapreduce job
+2) How ill sqoop export data from hadoop
 
-Put device endpoint connection string in code.
+Hadoop >> Projects >> Spark >> Projects
+Practice Scala Course
+Projects
+Weblog Analysis with Mr/Hive
+MovieLens with MR
+HR Analysis MR
+RollerCoaster Hive (few KPIs with UDF)
+Sentiment Analysis MR/Hive most popular project for jobs
+
+Deadline: 30 days, 3 projects
+Mail source code, o/p screenshots. readme doc with assumptions/practice followed
+support@data-flair.training
+
+Attend Mock Interview
+Read DataFlair hadoop interview questions.
+
+
+
 
 
 
