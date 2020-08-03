@@ -217,3 +217,27 @@ BeanStalk is Platform as a service for developers to deploy application
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html#:~:text=To%20get%20started%20with%20Java,run%20a%20scalable%20web%20application.
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/java-getstarted.html
  
+Cosnideration for customer for cloud deployment
+a)Choose Region based on
+  1) Budget
+  2) Low Latency for
+     1. End Users
+     2. Content team/Developers: CloudFront CDN, Transfer Acceleration Service : Service to Speed up data transfer from one region to another
+  3) Compliance 
+     As part of compliance customer may have to deploy in region that they serve
+
+b) Choose zones
+  1) S3- replicated by default
+  2) For others we need to configure zone and it has cost impact
+  
+
+
+
+
+
+
+
+
+
+
+
