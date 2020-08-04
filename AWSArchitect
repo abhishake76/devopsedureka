@@ -231,6 +231,29 @@ b) Choose zones
   2) For others we need to configure zone and it has cost impact
   
 
+AWS CLI: download it from aws website
+start with following commands
+command: aws configure
+enter access key id
+enter secret access key
+enter default region name id
+
+
+
+Zone id url: https://docs.aws.amazon.com/general/latest/gr/rande.html
+Everything will be defined in default region name unless specified otherwise
+
+
+Project 1
+Project 2
+Project 3:
+
+Write up: 
+ScreenShots:
+SourceCode:
+
+
+
 
 
 
