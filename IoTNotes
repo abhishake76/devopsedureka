@@ -34,6 +34,13 @@ Sensors come with C libraries which can be used to read data.
 program ca be uploaded from this ide to arduino board.
 you can see output of sensor in ide console.
 
+
+https://www.raspberrypi-spy.co.uk/2017/09/dht11-temperature-and-humidity-sensor-raspberry-pi/
+
+ https://docs.microsoft.com/en-us/azure/iot-hub/iot-hub-python-python-file-upload
+ 
+
+
 PIR sensor for infrared spectrum reading
 
 sense hat is fit on gpio pins. General purpose input output pins
