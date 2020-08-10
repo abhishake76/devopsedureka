@@ -1,1 +1,11 @@
 RDD rememebrs its origin and is called lineage and helps in fault tolerance
+
+RDD is collection of distributed and immutable paritions
+
+Programming in spark means applying different operations on RDD
+
+Partitions can be created at start time.
+
+RDD cna be reparitioned but is a costly operation
+
+Pair RDD are special form of RDD with key.value pair and plays important rule in distributed cluster
