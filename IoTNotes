@@ -256,3 +256,9 @@ fog is layer including all devices, all sensors, all mp all mpc,
 edge is a gateway sending data from fog to outside network cloud
 edge device will preprocess data before sending data to outside network or cloud
 edge module can also monitor device latency, device health etc
+
+
+Adafruit and digi sensors with range of 3v t 5v are popular
+
+Project help https://docs.microsoft.com/en-us/azure/stream-analytics/stream-analytics-get-started-with-azure-stream-analytics-to-process-data-from-iot-devices
+
