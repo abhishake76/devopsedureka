@@ -17,3 +17,5 @@ ONly when real action like filter is called then files are read, paritions creat
 Use eclipse for Scala instead of scala plugin for eclipse.
 
 
+SparkContext is deprcated API.
+Use SparkSession.
