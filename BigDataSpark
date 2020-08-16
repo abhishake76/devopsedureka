@@ -9,3 +9,11 @@ Partitions can be created at start time.
 RDD cna be reparitioned but is a costly operation
 
 Pair RDD are special form of RDD with key.value pair and plays important rule in distributed cluster
+
+
+scala commands like cache, RDD creation, transform methods are lazy in nature. 
+ONly when real action like filter is called then files are read, paritions created and action executed.
+
+Use eclipse for Scala instead of scala plugin for eclipse.
+
+
