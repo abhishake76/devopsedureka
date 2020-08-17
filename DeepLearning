@@ -1,1 +1,44 @@
+https://drive.google.com/drive/folders/1_pz_7Nt9Nz0ILMEyuSJB20MFrRlKQkAN
+
+https://community.simplilearn.com/threads/deep-learning-with-keras-and-tensorflow-sujatha-15-aug-06-sept.54708/
+
+TENSORLFLOW still does not work with 3.7, so changed conda to user python version 3.6
+
+Bias will be same for all neuron in a single layer but may vary across layers
+
+Input layer has no biases
+
+How many neurons? No best number in each layer but normally used as (Number of features)/2 + 1.
+
+Normally same number of neurons in hidden/middle layers.
+
+High Bias means more assumptions
+
+Perceptron is single layer neural network for supervised learning and can solve linearly separable classification problem
+Weights are automaticaly learned
+
+XOR problem is not solved in single perceptron
+
+kernel fit is taking features in to higher dimension from 2d to 4d to 5d...to help classfiy them into groups. 
+Each new dimension can affect the number of neuron and number of layers???
+
+If input mx+c is zero then neuron is not fired.
+
+Activation function will keep outpot in bounded rules.
+ML does not have activation function and back propogation which is there in DL
+
+Weight is adjusted in backpropogation...bias remain same.
+
+Backpropogation happens at each individual layer to minimize the loss function
+
+Epoch is a complete iterative cycle of forward and back propogation across all layers 
+
+Mutiple epochs are run to get a low error loss.
+
+Learning Rate n (nu) will decide how much the weight changes 
+Learning rate of 0.01 is recommended.
+
+Vanishing Gradient is when change in weight does not affect the decrease in loss
+
+
 
