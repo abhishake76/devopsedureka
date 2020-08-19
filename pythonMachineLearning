@@ -1,1 +1,48 @@
 
+If you put r or R in front of any statement in print command, the string will be printed as raw string with all tags like \n \t printed as it is rathe than them getting converte into space characters
+formatters like %d, %s will still be translated into real values in raw format string if we do pass values of formatter.
+
+python is case sensitive language
+
+quotes type is fluid at start of string and can be mix of ' and ".
+End of string is determined by same set of string
+
+There is a complex data type also in python like C=10+6j
+
+Python is indendation level block language like YAML
+
+str is a datatype keyword in python, but can be reassigned as a variable
+str = 1
+int ='a'
+
+In spyder, you need to save file before you can execute each line in the file.
+
+In python lexicography, capital alphabets have low lexicography number than small lexicography number.
+That is capital letter is stored  before small letters in computer storage 
+
+for index method, if searched char/string is not there it will trhow error. 
+find method will return -1 in this case.
+
+dir() will  list all  variable inlcuding non declared valriables (prefixed with _) used in that python program memory
+
+str[::-1] will print string in reverse order
+
+concatenation will NOT work for str + int and int + str.
+datattypes should be same for addition/concatenation
+You can multiply string with numeral A*20 means A will be concatenated 20 times
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
