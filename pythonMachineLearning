@@ -30,10 +30,48 @@ str[::-1] will print string in reverse order
 concatenation will NOT work for str + int and int + str.
 datattypes should be same for addition/concatenation
 You can multiply string with numeral A*20 means A will be concatenated 20 times
+Same multiplication you can do with Tuple
+
+Tuples are unmutatable tup =(1,2) whereas list is mutable list1 = [1,2]
+
+del method is used to remove item based on indext value.
+remove method is used to remove first item based on value.
+del(list[1])
+list.remove('Abhi')
+append will add one element at end to list
+extend will add all elements to list from provided data.
+
+Dictionary key has to be string or int. Value can be any object.
+If you put duplicate keys, then latest occurance of key,value pair is taken in consideration
+dict[key] gives value
+dict[key] set value
+del(dict[20]) deletes key value pair
+dict.get(key) will not return error if key is no present
+dict = {3:'Python', 4:'Java' }
+
+Set has unique set of values
+A={12,2,3}
+you can convert list to set to remove duplicates
+You can execute set operation like A-B or B-A or A|B (A union of B) or A&B (A intersection of B)  for set datatype
+A[value] will give value
+Other syntax for set operation is 
+s={1,2,3,'a','c','b'}
+set1={1,'a','b'}
+print(3 not in Org)
+print(set1.issubset(s))
+print(3 not in s)
+print(s.issuperset(set1))
+print(s.union(set1))
+print(s.intersection(set1))
+print(s.difference(set1))
+print(s.symmetric_difference(set1))
+symeetric difference will look at values with their index to diff two sets
 
 
-
-
+Add, remove, discard to add remove values
+remove will give error if value is not present
+discard will ignore the error
+Set.pop will remove the first occurance of value
 
 
 
