@@ -73,6 +73,52 @@ remove will give error if value is not present
 discard will ignore the error
 Set.pop will remove the first occurance of value
 
+for logical operator and,or,not
+a=10, b=20
+print (a and b) will return value of last value scanned , in this case b
+print (a or b) will return value of first value scanned , in this case a
+print (not a) will return boolena value
+
+for bitwise operator
+a&b, a|b, a^b(XOR)
+a=10, b=35
+It will convert a and b into 8 bit number and then apply bit operator
+print shift bits (a<<2)
+reverse 0 by 1 and 1 by 0 ~a
+XOR menas use OR result only if two bits are different. If two bits are on or off, then that bit it is considered as false.
+
+
+Identity operator 'is' compares reference of variables
+== operator compares values of variables
+
+increments is done like a+=1 and not as a++
+
+range(n) gives values from 0 to n-1 and you can use it to iterate.
+
+iterator stamtmet end with :
+while (ranl>1):
+ print('hello')
+ break
+
+Breaking from loop
+break       :will break the lo
+continue    :will stop execution of current iteration and continue with next iteration
+pass        :dummy statement which does not change position of cursor and helps in complete of syntax of statements like if,else etc
+if (j==5):
+ print(j)
+else:
+ pass
+You cand use break and continue only inside a loop, wherewas pass can be used anywhere
+
+str1=input("Enter your input")
+input is always string value. typecast into value as required
+
+
+
+
+
+
+
 
 
 
