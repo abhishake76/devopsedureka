@@ -30,8 +30,11 @@ ML does not have activation function and back propogation which is there in DL
 Weight is adjusted in backpropogation...bias remain same.
 
 Backpropogation happens at each individual layer to minimize the loss function
+Bakcpropgation can also change bias
 
 Epoch is a complete iterative cycle of forward and back propogation across all layers 
+
+Bias help in firing neuron as well in case weight X input is zero.
 
 Mutiple epochs are run to get a low error loss.
 
@@ -39,6 +42,43 @@ Learning Rate n (nu) will decide how much the weight changes
 Learning rate of 0.01 is recommended.
 
 Vanishing Gradient is when change in weight does not affect the decrease in loss
+
+Activation function is for re-scalaing the input param with weight and bias to bring them into comparable range
+Sigmoid : 0 to 1
+Tanh: -1 tp 1
+Sigmoid and Tanh have problem of vanishing gradient
+
+Relu: o to Infinity with max(0, input)
+Relu gives sparse network and not all nodes are fired.
+But since it is sparse, it is faster algorithm
+If lot of values are negative, then lot of values will be zero and neron will not be triggered. This problem is dying relu.
+
+So we came with concept of leaky relu so that there are les zero neurons
+y=ax when x<0, say a =0.03 (default)  otherwise max(0, x)
+
+Relu, sigmoid, tanh are used for binary classification
+
+For multiclass function, we use softmax
+return proobaiity distribution for all classes
+Negative inputs gets converted into non negative values.
+Each input will be in interval (0,1)
+
+Softmax will be generally used at output layer
+Relu will be generally used in network hidden layer
+
+
+REgularization means dropping/switching off some nodes where alsmot all nodes are activated to avoid over fitting
+Each iteration in forward propgation will choose random nodes to turn off
+
+Normally number of neurons are equal to number of features in input layer
+hidden layer will have customizable less number of layers
+Number of nodes in output layer is equal to number of classificatio n required.
+
+
+NUmber of epoch and number of batch size for input features controll the training time
+
+Sequential will solve multip perceptron classification and regression problem both.
+
 
 
 
