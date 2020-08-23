@@ -19,3 +19,10 @@ Use eclipse for Scala instead of scala plugin for eclipse.
 
 SparkContext is deprcated API.
 Use SparkSession.
+
+Read difference ebtween Hive and SPark SQL
+
+
+Type cohesion and loose coupling is standard architecture preference
+But Sprak follows tight coupling between relational and procedural processing
+This integration is done by declaratve DataFrame APIs in spark code
