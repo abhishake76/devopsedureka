@@ -341,6 +341,166 @@ Attend Mock Interview
 Read DataFlair hadoop interview questions.
 
 
+WHat is safe mode?
+Safe Mode: Read only mode in HDFS
+Namenode goes into safe mode when nodes are restarted then some nodes can go in safe mode
+when lot of blocks are missing then also node can go into namenode
+when does it come out of safe node? dependnds on cluster size, node size, number of blocks and many more configuration setting
+you may need to run command manuualy to move ode out of safe mode
+its recommneded to let hadoop take time to auto come out of safe mode
+
+
+How to optimize MR job?
+1. Use optimmzed code and datatype like List vs Vector, StringBuffer vs string, best hadoop data types
+2. Try to optmize network operations  like sshuffling by using combiner, if applicable. 
+   Compress the output of mapper by setting the properti in map-reduce config file. 
+   Do not compress at cost of CPU.
+3. start and stop of jvm happens for every task which can slow down job. Optimize number of jobs and optimize block size. You can have block size of 256 mb in production
+   Data processing time of task shoould be in range of 8-10 times of Jvm start and stop time.
+   Reuse JVM by starting batch of JVMs for n number of times. Too many times reusagecan be risky because of some leak or high gc heap.
+4. Number of mappers and reducers should be optimized.
+5. Enable speculative execution. Some tasks might get stuck and should not define efficency of overall map reduce job.
+6. Cluster performance tuning is also important. Node configuration is also important.
+7. 
+
+Is the result from mapper or partitioner written to local disk?
+Output from mapper is called intermediate output and  contain processed key value pairs. 
+Mapper output is in memory buffer.
+Map result key-value pairs are comibned by combiner and sent to Paritioner class. 
+Parition class sort the pairs and store it on disk
+Then this paritioned data is shuffled to nodes running reducers
+
+Where sorting of data is done? On Mapper or Reducer? Which sort algorithm is used?
+Sorting is done on both mapper and reducer.
+Sort is also during map task using Quick sort Algorithm.
+But main sorting is done during shuffle and sort task on reducer node using Merge sort Algorithm.
+
+Q Convince your client for spark based solution for a big data problem
+
+Q Why did you ditch Hadoop?
+We didint ditch Hadoop. Talk about architecture and spark'
+
+
+Q. Plan Hadoop/spark cluster
+-100 Gb data daily
+-2 PB historical data
+
+Put adjustment factor for increase in data 
+-100 Gb X 365 = 36 TB => 50 TB => 100 TB
+-2100 TB x RF( say RF =2, +1 for imtermiediate data being written to hdfs)
+- 6300 TB
+Say 30 (3 X10) TB is available per node
+210 nodes for hdfs
+
+Now data went 5 times up in few months
+Will need more nodes as data goes up
+
+
+Q. What is difference between groupBykey/ReduceByKey and which operation among them is the action?
+From the two method, which will you recommend?
+ReduceByKey and GroupByKey are both transformation function.
+reducebykey is having combiner as welll and hence more optimized
+
+Q. Why RDDs are immutable?
+Ans Main reason is performance as you are updating in memory cache in a distributed cluster.
+Immutability is also needed as you need to maintain lineage across RDDs
+
+
+Q What are limitations of Apache Spark?
+
+
+Q How to use Spark over Hadoop?
+
+Action::: show 3 years of Big data experience with big data architect knowledge
+
+Show only 1 big data project in resume
+You can add one POC as well.
+
+Which project to add in your profile?
+Setupbox project is of the best project to mention.
+AAdhar card and IVR enterprise analysis
+Convert your existing project to big data project
+
+Add project Details such as:
+Requirement Analysis
+Architecture
+Data Flow
+Data Collection
+
+
+Name of all the components from Data Collection to Visualization along with version.
+
+
+Most important part is Data Collection
+What is your data source?
+What is the format of data being collected? xml, csv, json, txt etc
+What is character encoding?
+How is data being cleansed?
+What is the data volume daily and historical? - Neither too low or too high volume to defend it?
+
+Naver say too low number node cluster like 3,5,10 or too high as 1000
+Dont say  whole number of nodes say such as 100/200/300/500
+Make sure your data size justfies number of nodes
+Case can be other projects are using same cluster as yours
+
+Mention Map/reduce/scala
+
+Node Configuration as of today?
+Master: Main special dedicated high spec machine
+- 256 GB RAM
+- 32 core processors
+- 20 TB Disk (with RAID)
+
+Slave()
+- 64/128 GB RAM
+- 16 Core processors
+- 10 * 4.7 TB (with JBOD)
+
+Netowrk Speed: 10 GBPS
+
+OS: RedHat(6/7) is preferred over CentOS
+
+Team size: 5 -15
+
+Challenges:
+Note your challenges form project executed.
+Data :
+-Format changes continously
+-Different in development than in production
+Write a pre processing jobs for data quality/itegrity checks
+
+Integration points :
+
+Data Collection and source can be challenege:
+
+
+
+--Drive your own interview--
+-Use Buzz words 
+-Add buzz words in your profile
+-Prepare your question and answers and design your resume around them
+-Attach one story/use case with every answer
+
+
+Keep the numers ready for any answer
+Jio architecture requirement was to handle 1 billions eventa were second.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
 
 
 
