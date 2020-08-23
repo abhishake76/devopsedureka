@@ -57,15 +57,24 @@ So we came with concept of leaky relu so that there are les zero neurons
 y=ax when x<0, say a =0.03 (default)  otherwise max(0, x)
 
 Relu, sigmoid, tanh are used for binary classification
+You can us e tanh, if required, for  regression 
 
 For multiclass function, we use softmax
 return proobaiity distribution for all classes
+the highest probability output in sfotmax is the classification value of that input
 Negative inputs gets converted into non negative values.
 Each input will be in interval (0,1)
 
+You can use RELU function in hidden layer.
+You can use softmax, sigmoid at output layer for classification.
+
+
+
 Softmax will be generally used at output layer
 Relu will be generally used in network hidden layer
-
+For Regression there is one neuron output and so  activation function is not required on output neuron as there is only 1 unique value as output.
+If only you want to scalre up/down your output, you can use some activation function on output neuron.
+Classification has mutiple values for binary or mutiple values calssification, you can use activation function on output neurons
 
 REgularization means dropping/switching off some nodes where alsmot all nodes are activated to avoid over fitting
 Each iteration in forward propgation will choose random nodes to turn off
@@ -73,11 +82,30 @@ Each iteration in forward propgation will choose random nodes to turn off
 Normally number of neurons are equal to number of features in input layer
 hidden layer will have customizable less number of layers
 Number of nodes in output layer is equal to number of classificatio n required.
-
-
 NUmber of epoch and number of batch size for input features controll the training time
 
 Sequential will solve multip perceptron classification and regression problem both.
+
+Batch Normalization is done to bring input value within scae with mean and standard deviation
+for x, convert x to (1-mean)/SD, isused at input layer
+for hidden layers, ml generated its own value alpha and beta to bring the data from hidden neuron into a scaled limit
+
+Activation func to activate node and take output towards desired regression/classification value, 
+whereas we are doing normalization to get the data in to the same scale
+
+It is good practice to add batch normalization after every layer
+
+say if there are 13 input features,
+so after input layer batch normalization with 13 features
+totla params = 13 output + 13 bias + 13 mean + 13 SD
+batch normalization after hidden layer with 2 neurons
+total params = 2 output + 2 alpha + 2 beta + 2 bias
+
+diabitis problem: reshape to make 2d data to 1 d data
+model = tf.keras.models.Sequential()
+model.add(tf.keras.layers.Reshape((8,),input_shape=(8,)))
+#Normalize the data
+model.add(tf.keras.layers.BatchNormalization())
 
 
 
