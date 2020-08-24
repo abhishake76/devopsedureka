@@ -113,6 +113,41 @@ You cand use break and continue only inside a loop, wherewas pass can be used an
 str1=input("Enter your input")
 input is always string value. typecast into value as required
 
+file operations:
+Use \\ in path or start file path with r for using file path string as is without any formatting transformation
+newfile=open(r"C:\\Training_Py.txt","a+")
+a mode will append to file
+w mode will create/overide a new file and allow only write into file
+r mode will only allow to read the file
+w+, r+, a+ will allow both read and write.
+r+ will allow to read and write the data.
+diff between w+ and r+ mode is:
+    w+ will create/override a new file
+    w+, r+ will put cursor place at 0, a+ will put the cursor position at end of file by default
+    r+ mode will only allow change of file cursor so r+ is preffered to write data at any cursor place
+The file operations are done in memory and changes are done to file only when file is closed
+newfile.close()
+
+newfile.tell() gives the file cursor
+newfile.seek(100) will change the file curosr to  100 position
+
+newfile.readline() will read one line
+newfile.readlines() will read all lines
+
+for line in open("Abhi.csv", "r"):
+    print(line)
+
+read in reversed order, last line first and first line last
+for line in reversed(list(open("Abhi.csv", "r"))
+
+os.getcwd gives current working directory
+os.path.join joins two paths with right separator
+
+os.rename to rename or move the file to different path
+
+dir (command) will give list of operation on that command like dir(os)
+
+
 
 
 
