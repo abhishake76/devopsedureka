@@ -146,22 +146,27 @@ os.path.join joins two paths with right separator
 os.rename to rename or move the file to different path
 
 dir (command) will give list of operation on that command like dir(os)
+dir() will give list of all variables(user defined and kernel generated) and user defined functions initialized in a program
+
+inside a function you can use a variable defined outside the block with global identifier
+x=10
+def add (a,b)
+ global x
+ x= x + 1 
+ return a + b + x
+ 
+User can define a fuction with a same name as inbuilt function and for user program definition of user defined function will be used
+
+sorted function is available in python 3. sort funvtion is not available in python 3.
+
+study >>>> map,filter,reduce
+
+def greet (*name)
+*name is list of mutiple dynamic values
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+End
