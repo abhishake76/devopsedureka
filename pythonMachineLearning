@@ -161,8 +161,42 @@ sorted function is available in python 3. sort funvtion is not available in pyth
 
 study >>>> map,filter,reduce
 
-def greet (*name)
-*name is list of mutiple dynamic values
+def greet (*name) //arbitrary arguement
+*name is tuple with mutiple dynamic length of variable count
+greet ("hi", "bye")
+greet ("hello")
+greet([5,6], "Hello")
+
+def bar (a,b,**name) //key value of variable length arguement
+**name is dictionary with mutiple dynamic length of variable count
+bar(1,2, name="hello", class="2")
+
+combination of both
+def myFunction(arg1, arg2, arg3, *args, **kwargs):
+myFunction(1(arg1), 2(arg2), 3(arg3), 4, 5, ['6', 7]( 3variable *args), name='Mandar', country='India', age=25(3 variabl for **args))
+
+
+OOPs
+class ABC():
+ def __init__(self): //constructor
+  self.__pri="I am Private"
+  self._pro="I am Protected"
+  self.pub="I am Public"
+ 
+ def __del__(self):
+  //destructor
+
+__ two underscore for private variable methods
+_ one underscore for protected variable methods
+no underscore for public variable methods
+
+you can access private method like this which is not recommended
+#obj.__myPrivateMethod()
+obj._MyClass__myPrivateMethod()
+  
+
+
+
 
 
 
