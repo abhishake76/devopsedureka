@@ -194,7 +194,27 @@ you can access private method like this which is not recommended
 #obj.__myPrivateMethod()
 obj._MyClass__myPrivateMethod()
   
+self is the instance of the class and needs to be mandatorily defined in method definition
+if you are not defining self in a @classmethod, then first arg will be considered the reference of the object being called
+class Date:
+	def __init__(self, year, month, day): #year-month-day
+			# print("init")
+	@classmethod
+	def dmy(cls, day, month, year): #day-month-year
+		# print("dmy")
 
+you can define subclass of above class as below
+class customDate(Date):
+ pass
+ 
+try catch can be printed with sys.exc_info()
+try:
+ print(y)
+except:
+ print("Oops!",sys.exc_info()[0],"occured")
+finally: #optional
+ pass
+ 
 
 
 
