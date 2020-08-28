@@ -216,10 +216,11 @@ finally: #optional
  pass
  
 
+multi inheritance is allowed in python.
+if both classes has same method or variable, the class which is defnied first in extension will be considered.
 
-
-
-
+pandas read files in memories
+You can read chunks of data to avoid memory load size issues
 
 
 
