@@ -109,8 +109,9 @@ model.add(tf.keras.layers.BatchNormalization())
 
 
 >>>>>>>>study data cleansing model such as smote ec
->>>> acc ruc curver
+>>>> acc ruc curve
 
+overfitting is when accuracy is increasing but validation accuracy is decreasing
 
 
 
