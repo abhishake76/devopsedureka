@@ -28,3 +28,23 @@ But Sprak follows tight coupling between relational and procedural processing
 This integration is done by declaratve DataFrame APIs in spark code
 
 flume assempy integration jar needed to read from flume in spark
+
+Graphx
+GraphLab
+Giraph 
+Naiive Spark
+
+SDB using RDD
+AAdhar CArd using 
+ -Data Frame (SQL) and 
+ -Data Set (Operations)
+ 
+You can solve hadoop projects using map reduce.
+
+
+
+ 
+
+support@data-flair.training
+src code, o/p screenshots, readme doc
+
