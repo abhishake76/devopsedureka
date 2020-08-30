@@ -26,3 +26,5 @@ Read difference ebtween Hive and SPark SQL
 Type cohesion and loose coupling is standard architecture preference
 But Sprak follows tight coupling between relational and procedural processing
 This integration is done by declaratve DataFrame APIs in spark code
+
+flume assempy integration jar needed to read from flume in spark
