@@ -223,5 +223,13 @@ pandas read files in memories
 You can read chunks of data to avoid memory load size issues
 
 
+2d line y= mx +c
+n dimension line y (output) = m1x1 + m2x2 + ....+ Co (c1 + c2.....)   1,2,3....are dimensions
+m is coefficient
+c is intercept
+
+
+
+
 
 End
