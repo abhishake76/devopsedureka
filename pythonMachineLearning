@@ -228,6 +228,8 @@ n dimension line y (output) = m1x1 + m2x2 + ....+ Co (c1 + c2.....)   1,2,3....a
 m is coefficient
 c is intercept
 
+pandadas.dummies converts possible string objects into integer columns. 
+you have to review and drop unnecessary columns
 
 
 
