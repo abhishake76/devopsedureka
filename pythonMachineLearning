@@ -231,6 +231,19 @@ c is intercept
 pandadas.dummies converts possible string objects into integer columns. 
 you have to review and drop unnecessary columns
 
+Important alogorithms:
+linear regression
+Logistic Regression
+Decison Tree
+K-Means CLustering technique
+
+Decision tree has alogorithm to produce classification and continuous results as well
+
+Overfitting avoid generalization so if new data comes in production, it might be too far off from nearest curve point to predict right result.
+
+grpahviz is an application for seeing visual representation of decision tree.
+
+Hyper Paremeter tuning in Decision tree by using Grid Search CV, Randomized Search CV
 
 
 
