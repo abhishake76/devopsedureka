@@ -116,4 +116,32 @@ overfitting is when accuracy is increasing but validation accuracy is decreasing
 
 Drop column with Missing values mroe than 40%
 
+Use agmented image for better classification with less data
+
+In sentimaent anaylsis, take care of negation before considering weights for good or bad worlds.
+For example if you consider not and good as individual words, good with more weight will overshadow negative words
+so in this case if good word is preceded/followded by bad word, then bad+good word is replaced ny antonym
+
+
+Work embedding : convert text data into numerical value bu hot encoding
+Every line considered as one document
+Methods to make bag of words
+1) count vectozer-> 
+Remove stop words while doing one word hotcoding
+Every vector in hotspot encoding should have same size
+so if each document has different words, then hotspot vector can be of big matrix size
+each word is a feature or a count. Gives count for each word and does not associate weight with wrods.
+sequence is also not maintained in count vectoizer, so it is not generally not used
+
+2)TF-IDF:
+calculate term frequency and inverse document frequency
+
+Continous Bag of words
+
+Cooocurrence matrox with a fixed context widnow
+
+
+PCA works on linear data 
+Autoencoders can work any kind of data including images
+
 
