@@ -114,6 +114,6 @@ model.add(tf.keras.layers.BatchNormalization())
 overfitting is when accuracy is increasing but validation accuracy is decreasing
 
 
-
+Drop column with Missing values mroe than 40%
 
 
