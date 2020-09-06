@@ -2,3 +2,9 @@
 1) Data Stack Enterprise DSE Casandra
 2) Appache Casandra
 
+Toad supports Casandra as UI client
+Data Stack client
+
+Transparent Data Encrytion TDE is available wtih Data Stack and not Apache Casandra 
+
+COnsistency can be finetuned at every transaction level
