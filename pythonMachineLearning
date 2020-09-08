@@ -251,7 +251,14 @@ pandas Categoricla status gives categroes to textual data
 PCA used for dimensionality reduction mainly in unsupervised learning
 LDA used for dimensionality reduction mainly in classification problem in like SVM.
 
-
 Residual line is drawn parallel to y axis whereas as tangent time is drawn perpendicular to new dimension
+
+
+SVM is more compute intensive than other algorithms
+
+
+
+
+
 
 End
