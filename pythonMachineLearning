@@ -256,7 +256,7 @@ Residual line is drawn parallel to y axis whereas as tangent time is drawn perpe
 
 SVM is more compute intensive than other algorithms
 
-
+Cosine manipulation can help scale down the metric value
 
 
 
