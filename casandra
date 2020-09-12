@@ -8,3 +8,28 @@ Data Stack client
 Transparent Data Encrytion TDE is available wtih Data Stack and not Apache Casandra 
 
 COnsistency can be finetuned at every transaction level
+
+
+read hinted hand out on cordinator node in cassandra
+hint default pile up time to replicate is 3 hours. 
+after configured time, new hint data is not accepted and not replicted
+beyond hint period, we cna run node tool repair to make each node have latest copy of  data.
+
+
+tombstone is soft delete for file marked for deletion
+tombstone expirey time be default is 10 days.
+gr_grace_seconds is property for tombstone expiry
+after this period, casandra deletes the files.
+once data is marked for delete, you cannot retrieve that data from application
+
+if node is down from more than gr_grace_periods, dont run node tool repair but instead rebuild your node
+because when node is back uo it is a possibility that old data on those nodes are replicated to other nodes.
+this data is called zombie data.
+Rebuild node will means fresh data is replicated on this node from other nodes.
+
+Read repair is another way to achieve the eventual consistency.
+
+casandra nevers read before write, it never throws constraint violation exception
+it will overide values, if required.
+
+
