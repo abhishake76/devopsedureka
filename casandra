@@ -32,4 +32,41 @@ Read repair is another way to achieve the eventual consistency.
 casandra nevers read before write, it never throws constraint violation exception
 it will overide values, if required.
 
+In CAP tehorem, Casssandra lies in AP part as consistentcy thorugh provided and tunable but not guaranteeed across
+
+If consistency ALL is selected, then availability becomes a challenge.
+so we use one for low consistency or chorum to read/write from majority of replicas.
+use chorum for better consistency both in read and write
+
+CQL and Thrift are just data reprentations to client. Data structure is same for both i.e. column family.
+Thrift is now depricated after version casandra 2.1.8
+But it can represent raw cassandra data model, so you need this client to understand casabdra version.
+
+Casandra CLI is client for Thrift... CQLsh is client for SQL.
+
+partiionkey column is part of primary key that is responsbile for sharding of data.
+Thats why 1 column is required to be defined as primary key.
+so select * from emp is not good as it will have no primary key/partiioner key to find out nodes for reading/writing
+and this statement will go to all nodes.
+Primary Key  has Parition key + clustering column(s)
+parition key cna be combination of more than pone columns
+partition key is used for creating storage partition
+Clustering column is used for clustering of data and sorting of data at storage/paritionlevel
+
+primary key ( (partion key1, partition key 2,..), clustering key 1, clustering key 2,...)
+
+
+At raw level, data is shown as hexadceimal value in thrift cli 
+
+With primary key as one field, the partition will be based on unique primary key.
+With primary key as two columns, one partition key and second clustering column, the parition will be made on unique partiion key.
+Each partition can be stored only on one node and dstributed across nodes
+Line with name but empty value  is new line for display of Thrift
+
+unit of data is partition...and partition is located by partition key
+adjust your data model as per queries so that minimum parition are queried
+partition size is limited by memory of node memory size.
+So Volume of data is a important consideration for casandera data modeling
+Bucketing is generally used to control parition size with a possible changing column or dummy bucket id as part of parition key.
+
 
