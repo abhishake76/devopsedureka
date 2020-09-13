@@ -67,6 +67,18 @@ unit of data is partition...and partition is located by partition key
 adjust your data model as per queries so that minimum parition are queried
 partition size is limited by memory of node memory size.
 So Volume of data is a important consideration for casandera data modeling
-Bucketing is generally used to control parition size with a possible changing column or dummy bucket id as part of parition key.
+Bucketing is generally used to control parition size with column(s) that change periodically or dummy bucket id as part of parition key.
+
+Write more about counters.
+counter cannot be primary and cannot be initialized by insert.
+
+
+COllections:
+List is high level impementation of array in casandra
+Set with unique values, no insertion order
+Map with key value pair
+
+Dynamic columns were acrifixed with thrift going away and collections were introduced to provide dynamicity
+
 
 
