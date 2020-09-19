@@ -46,7 +46,7 @@ Casandra CLI is client for Thrift... CQLsh is client for SQL.
 
 partiionkey column is part of primary key that is responsbile for sharding of data.
 Thats why 1 column is required to be defined as primary key.
-so select * from emp is not good as it will have no primary key/partiioner key to find out nodes for reading/writing
+so select * from emp is not recommended as it will have no primary key/partiioner key to find out nodes for reading/writing
 and this statement will go to all nodes.
 Primary Key  has Parition key + clustering column(s)
 parition key cna be combination of more than pone columns
@@ -79,6 +79,65 @@ Set with unique values, no insertion order
 Map with key value pair
 
 Dynamic columns were acrifixed with thrift going away and collections were introduced to provide dynamicity
+
+Partitioner gives token gives ring position and each node has mapping of ring position wiht partition id.
+
+Default timeout of casandra query is 5 seconds.
+
+By default clustering column is in ascending order. 
+Use WITH CLUSTERING ORDER BY (activity DESC) to make descending order sort storage
+
+system.dateof(activity) to see date string from UUID
+
+Create Type: to define data strcutre
+when you use type as datatype in tbale creation, you make the data type marked with FROZEN.
+FROZEN means whole data will be seleced or updated in full data type.
+
+Complext data type: key is not surrounded  by quotes but value are surrounded by quotes.
+In dictionary even key is surrounded by quotes.
+
+Time to Live TTL: given in seconds  and provides the longevity of data storage
+USING TTL 120;
+THis is not normally used as when you want to purge the data, you archive it first.
+At table creation you can say WITH default_time_to_live = 120
+
+STATIC data type identfier means all column will have same value.
+If insert provides new value for a column, all previuos values will be updated to new colummn value.
+static remain same for a parition
+
+Use ALLOW FILTERING for query to be run without parition id in select column with where clause of non parition key.
+You can define index on column for such cases so that performance is good and you need not use ALLOW FILTERING
+Create Index emp_name_index on emp_table(emp_name)
+Index creates mapping of emp_name and parition key emp_id.
+When you delte data, tombstones will be created in index mapping internal table
+To avoid index table, you can use table per query which is a denomalization exercise 
+But mutiple tables need to be updated for any change in data for insert/update/delete.
+This creates complexity in appplication code.
+SO idea of MATERIALIZED_VIEW  is used to bypas this restriction
+Cassandra does not have regular view.
+Materialzed view creates a different table for a query.
+You can create materialized view and query on experimental view.
+Materialzed view has restrictions are still called as in Beta.
+Materilzed orimary key should contain base table primary key and atmost inlcude one non primary key column
+Data modification is allowed only on base tables. 
+But you can have one base table but mutiple materialzed view for it to suppport non primary parition key 
+Updates in base table is streame to materialzed view in almost real time
+
+Use textasBlob to store blob data fro text and use blobtotext in read query to convert blob data to readable text
+
+Data is stored by keyspace and then table name on physical store
+
+Try not to change durable_writes in keyspace creation.By default it is true.
+
+By defining clustering column, I can put more and more rows
+We can only insert values less than 64kb in clustering cloumn
+
+Static table does not have clustering column, so one is to one mapping between paritions and rows
+Dynamic table has clustering column so one is to many mapping between paritions and rows
+
+adarsh0007@gmail.com
+
+
 
 
 
