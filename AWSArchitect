@@ -264,10 +264,38 @@ CA02 Exam
 Feedback Review form:
 https://www.trustpilot.com/review/simplilearn.com
 
+https://infrastructure.aws/ amazon infra view
+
+Only cost budget is free on Set your budget for Amazon Billing service
+Other budget types are paid service.
+
+S3
+1) Buckets: Unlimited size
+2) Objects - Unlimited objects. Max object size 5 TB.
+3) 5 Gb of totally free tier monthly usage
+4) Object size limit is 5 TB. In a single put command, you can upload only 5GB object size. 
+If you have objects more than 100 GB, we have to use multi-part upload.
 
 
 
+S3 Pricing is based on 5 factors
+1) Volume
+2) Storage class
+    a) Standard: Frequently used files
+    b) standard Infrquent Access(IA)
+    c) One zone IA
+    d) Glacier
+    e) Glaicier Deep Archive
+    f) Intelligent tiering
+3) Number of requests
+4) Time period
+5) Region
 
+Delete marker is marked only for files with versioning enabled.
+Without versioning file will be directly deleted from S3.
+
+We dont want old versioned system to be of active storage.
+Use lifecycle versioning to control storage class for old version'
 
 
 
