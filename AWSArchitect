@@ -298,4 +298,50 @@ We dont want old versioned system to be of active storage.
 Use lifecycle versioning to control storage class for old version'
 
 
+Cross region Replication happens within 15 minutes
+Versioning needs to be enabled for CRR
+S3 managememnt metrics is paid.
+S3 analyctics is free
+
+Get Object policy will allow to read every object in S3
+For policy defnition, principal is arn of exisinting AWS IAM user
+CORS configuration allow to configure crosss domain call
+
+Three type of purchaing option option
+1) On Demand Instance preferrred for short term requriement
+2) Reserved Instance: for long duration commitment. Billing for Reserved is much lower than On Demand
+   If paid whole upfornt than discount is most. If paid partially or in isntallements, then price will be more than full upfront
+    There is also a convertible plan where you can ove from 1 instance type to other woth adjustment in price
+3) Spot instance
+
+
+In E2 instanc creation, we have placement group to make simialr changes to group of ec2
+
+Tenancy are of 2 types:
+1) Shared: when we share single instance is used to host multiple application. low performance and shared resources
+2) Dedicated: whole hardware for your own instance for 2$/hr extra
+
+
+SSD storage: good for Randowm Access
+a General Purpose SSD:  100-3000 IOPS 
+b Provisioned IOPS SSD: upto 64000 IOPS
+IOPS - Input Output per second
+
+
+HDD storage: good for sequential access
+cheaper than SSD
+1) Throughput Optimized
+2) Magnetic
+Throughput: Rate of Data transfer
+
+Aftering attaching a new disk voumne to EC2 instance, you need to mount new volume in EC2 instance OS
+How to mpount external volume in Ec2:
+1) lslbk to show all attached volumes
+2) sudo mkfs -t ext4 /dev/xvdf to format and create file structure on new volume
+3) sudo mount  /dev/xvdf /root/newmount
+4) df -h to see data for different volumes
+
+
+
+
 
