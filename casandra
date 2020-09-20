@@ -137,6 +137,51 @@ Dynamic table has clustering column so one is to many mapping between paritions 
 
 adarsh0007@gmail.com
 
+use virtual node for tokens and if num_tokens is 256, it means node uses vnode
+
+
+When data arrives on node, it get appended to commit log(disk) and then on mem table(memory)
+Data is written in SS dable in compressed format
+
+
+When these strucutres are full to a configured limit, data is flushed to SS(String sorted) table and commit log is rotated
+SS table is immutable
+Every logical table has its own commit log, mm table and ss table
+
+Every column is appended with timestamp, so mem table or mutiple ss tables containing same dataset with updates will be resolved by latest timestampe
+mem table/ss table can contain mutiple partition key value
+
+Periodically compaction process runs to combine mutiple SS table.
+It retaing teh data with latest timestamp.
+The merged SS table is deleted fro disk.
+While compacting the data for tombstone items,  check for gc lifecycle is done,
+If gc_lifecycle time is passed, then compaction will not move it into merged ss table.
+gc lifecylce means data will be deleted after that time period on compaction and does not mean exact data is deleteds exactly at end of lifecylce time.
+So a lazy delete and gc
+Remember tomstone are marked at column level, so column will tombstone with expried gc is not moved to merged SS table
+
+
+In Reading, data is read from mem table and all active SS tables.
+Reading uses Bloom filter.
+Bloom filter file is created with SS table 
+1st question: whether parition exist in SS table ot not?
+If yes, bloom filter can give you false positive for data but never give you false negative
+You can configure bloom filter to ignore false postive at time fo creation of table.
+COmpression offset map wll be used to read data from Mem tbale and SS table
+
+For reading, parition index on disk is made containing parition number and offset in SS table
+Parition index itslef can be huge, so solve that problem weh have parition summary table in memory.
+Parition summary cotains parition range with index mapping normally for batch of 40 and is loaded in memory.
+Key cache is another table in memory table (for each SS table) for latest accessed/written parition and direct offset.
+if key cahce has data, then read does not ask Parition summary and parition index
+
+Read sequence
+1) Bloom filter will tell whether parition exists in this node
+2) Read will then go to Key Cahe, if data is hit then read will got to SS table to read and return teh data
+3) If data is miss, then read will go to parition summary, get the index range in parition index
+4) Read goes to Paririon index, get offset
+5) Read uses compression map to read and decompress data, update key cache for recently accessed data
+6) return the data
 
 
 
