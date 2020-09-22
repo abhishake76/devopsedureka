@@ -342,6 +342,16 @@ How to mpount external volume in Ec2:
 4) df -h to see data for different volumes
 
 
+EFS  3x Price EBS
+EFS 20x Price S3
+Multi AZ, pay only what you use, same as S3
+Unlike EBS, you can have multiple mount points in different AZ for same EFS. Transfer EFS file based on NFS protocol with Amazon DataSync
+
+Watch DynamoDb again on Linux Academy
+REad Secondary Index
+
+
+
 
 
 
