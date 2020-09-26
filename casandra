@@ -184,5 +184,81 @@ Read sequence
 6) return the data
 
 
+Seed node is the node which helps new node to gossip with all nodes.
+As part of bootstraping exsiting node will transfer some data to new node for balancing data volume.
+But old node cannot delete data immediately because of SS table immutability but new node is owner of that data.
+When node joins, within minutes(seconds ~ 2 minutes) token range are assigned. Data streaming will take some time for erxisting parition data.
+This is bootstraping
+V node
+Initial Node
+node tool join command to add new tool to cluster
+node cleanup to clean partiion keys SS table for old nodes that has moved data to new node
+
+edit cassandra yaml
+cluster_name
+seed node address
+listenaddrress
+rpc addresss
+endpointsnitch - GossipingSnitch
+
+in second node:
+add seed node address as address(es) of any existing node in sequence
+
+
+
+Gossiping file cassandra-rackdc.properties
+datacenter name dc
+rack name
+
+clear data from casandra/data directory
+
+./casandra -f //start casandra
+
+application uses rpc address
+cassandra uses listen address
+
+
+./nodetool status
+
+replication factor determines how much % of data is distributed on nodes
+with simple replication, data will be distributed equally across nodes
+with 4 nodes, each node will have 25% data in this case
+
+Sizing depends on netwroktoplogy 
+with network topology every data center with replication will have equal amount of data
+so with 2 nodes in each data center
+each node will have 50% of total data with replication across data centers
+
+To rmeove node from cluster
+1) Graceful separation: Tokens will be redistributed and data will be streamed to other nodes
+nodetool decommision //command
+node status changes from UN to UL and soon after data streaming, node is removed
+even after decomiision, casandra is kept up from any jmx based post analysis
+you can manually shutdown node after your analysis and clear data.
+2) Forced: Data will be stream from replica
+nodetool removenode <hostid>  //command used
+
+Node status can be: Normal/Leaving/Joining/Moving with state=Normal/Leaving/Joining/Moving
+
+Repair tool node uses Merkle tree algorith to find data dscrepancy
+
+node tool repair needs to be run peridically to make sure there is no corruption and data re consistent
+node tool needs to be repaired within gc grace period by default 10 days...usually done on weekends
+
+You can keep info level as default log level
+
+You can change log level for selective classes
+
+nodetool is a wrapper over jmx
+
+jmx api for minitoring is oudated now
+
+in java with jconsole you can connext to jmx
+
+
+vm args are important but are scattred across all files across nodes
+in JMX console: you get alll vmargs 
+
+jdk 1.8 supported for cassandra 3.x.x.x
 
 
