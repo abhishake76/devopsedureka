@@ -349,6 +349,23 @@ Unlike EBS, you can have multiple mount points in different AZ for same EFS. Tra
 
 Watch DynamoDb again on Linux Academy
 REad Secondary Index
+Per rds instance we n
+Max duration for lambad processing is 15 min and max package size for lambda is 250 mb
+
+
+Lightsail: easy way to create ec2/ec2 +app with more marketable entities
+
+RDS has also EC2_volume is afully managed database service
+per instance we can create mutiple database instance(except oracle) for 1 RDS instance
+we get free tier of 750 hrs of EC2 and separate 750 hrs of RDS
+
+dbeaver client to connect to RDBMS database
+
+Redshift is warehouse service for well strucutred data which has data coming from mutiple sources and getting stored in acentral place
+Its an expensive solution
+Teraadata, Google Bigdata are competitors for Redshift
+
+Datalake is used for unstructured data set
 
 
 
