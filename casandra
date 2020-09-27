@@ -1,3 +1,5 @@
+adarsh0007@gmail.com
+
 2 popular distribution of Casandra:
 1) Data Stack Enterprise DSE Casandra
 2) Appache Casandra
@@ -260,5 +262,40 @@ vm args are important but are scattred across all files across nodes
 in JMX console: you get alll vmargs 
 
 jdk 1.8 supported for cassandra 3.x.x.x
+
+OPcenter is data monitoring tool based on JMX for cassandra by Data Stax.
+
+You can use JMX matrixes integration in graffana
+https://grafana.com/grafana/dashboards/5408
+
+Security: Do not use default port for anything
+
+cfstats is replaced by nodetool tablestats
+
+in nodetool, jmx username and password are not used as they are now same as db username and db password
+
+nodetool netstats gives all network info
+
+nodetool tpstats to see 
+
+nodetoll compactionstats to see status of all running compaction and repair cycles
+
+drain will cut off node from network...stops the node and flushes all the data.useful before shutdown of node
+
+
+compression ratio 
+
+upgradesstable is always used in upgrade of cassandra so that old sstables are upgraded to new specs sstable in upgraded version
+
+
+nodetool snanpshot <keyspace> -cf <columnfamily>
+nodetool restore
+nodetool refresh
+nodetool ssl
+
+nodetool listsnapshots
+
+defaul reply timeout 5000 m: time cassandara will wait for other nodes to respond
+cassandra says generally to keep default guidelines
 
 
