@@ -368,6 +368,10 @@ Teraadata, Google Bigdata are competitors for Redshift
 Datalake is used for unstructured data set
 
 
+IPv6 is supported by only 3 class of families in EC2
+
+for large scale, we use Yaml for cloudformation
+for small scale, we can use json
 
 
 
