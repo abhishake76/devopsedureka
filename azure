@@ -25,5 +25,37 @@ Resource can be moved from 1 resource group to other resource group.
 
 RBAC: Role based access control be put for resource, resource group and subsription but not on tenant
 
+Use powershell ise for connecting to azure
+To create new resource group:
+New-AzResourceGroup -Name rg2 -Location "East US"
+
+You can enable powershell on desktop as:
+Install-Module -Name Az
+Import-Module -Name Az
+Login-AzAccount
+Select-AzSubscription -SubscriptionId '<subId>'
+
+
+ARM template to create resources:
+
+Deploy custom template in Azure portal to create resource with ARM script
+
+
+
+storage container has managed disk via containers, file shares, tables, queues  etc and needs a global name
+storage disk is individual storage and does not have replication factor
+Managed disk is PAAS component and storage disk is IAAS component
+
+
+Virual machines billling is genrraly per hour for on demand instances.
+Reserved cost is lesser than on demand
+1) Spot
+2) On demand
+3) Reserved
+
+2 cost factors:
+1) Compute cost: ampunt of time VM is up
+2) Storage cost: Incurred all the time based on storage selected
+
 
 
