@@ -58,4 +58,8 @@ Reserved cost is lesser than on demand
 2) Storage cost: Incurred all the time based on storage selected
 
 
+2 disks by default
+1) OS drive C with max 2008 GB
+2) Temproary storage D drive
 
+When you add disk to VM, Add it and save it. OTherwise disk will not be created
