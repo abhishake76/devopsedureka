@@ -63,3 +63,22 @@ Reserved cost is lesser than on demand
 2) Temproary storage D drive
 
 When you add disk to VM, Add it and save it. OTherwise disk will not be created
+
+
+Faultdomains means different rack
+availbilitt set means vm is placed different fault domains
+
+In planned maintenance activity, azure carry out maintains activity of update domain one by one.
+So spread VMs in different domains.
+In unplanned maintenance, a rack might go down and VMs in other fault domains will help.
+And Azure carry out this responsibility.
+It puts VMs in different fault domains and different update domains.
+So you should aim for atleast 2 VM in avaiibility set to ensure high availibility
+
+
+
+
+
+
+
+
