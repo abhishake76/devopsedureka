@@ -76,7 +76,11 @@ It puts VMs in different fault domains and different update domains.
 So you should aim for atleast 2 VM in avaiibility set to ensure high availibility of 99.9%
 
 
+Choose availability set even there is only onw az in region.
+With mutiple az, availability set is by default taken care by Azure
 
+
+COnvert pem key to ppk by putty egenrator to connect to Azure
 
 
 
