@@ -83,6 +83,11 @@ With mutiple az, availability set is by default taken care by Azure
 COnvert pem key to ppk by putty egenrator to connect to Azure
 
 
+Auto registeration needs to be enabled on private DNS for VMs in a resource group to get auto added to DNS group.
+OTherwise you will have to manually add A record for every VM
 
+mimimum subnet mask you can have in cloud is /29 as 5 IPs are reserved for every subnet
+
+service tag internet or 0.0.0.0/0 for internet ip in azure
 
 
