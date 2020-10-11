@@ -90,4 +90,7 @@ mimimum subnet mask you can have in cloud is /29 as 5 IPs are reserved for every
 
 service tag internet or 0.0.0.0/0 for internet ip in azure
 
+Virtual network can peer with virtual 500 virtual network directly and are non transitive in nature.
+With service chaining they can extend more wiht transivity with a hub network acting as forward, firewall, gateway
+you can duplicate hun for high availability with loab balancer
 
