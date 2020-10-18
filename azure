@@ -94,3 +94,50 @@ Virtual network can peer with virtual 500 virtual network directly and are non t
 With service chaining they can extend more wiht transivity with a hub network acting as forward, firewall, gateway
 you can duplicate hun for high availability with loab balancer
 
+MAx 500 VNET peering connection allowed
+route table should be formed in the region in which you have subnet to be associated to route table
+
+
+standard SKU load balancer gives you 1000 vms to balance and gives zones/region redundaancy
+
+Load balancer works on layer 4 whereas application gateway works on layer 7.
+Traffic manager is across region...application gateway is region specific
+
+Like bashion host and application gateway we need a dedicated subnet with /27 minum ip range
+Because withou creating a dedicated instance, application gaeway will not work
+application gateway can be more secure on layer 7 security so preferred over load balancer for single site pool
+for multi site pool, layer 7 filtering can be supported only for application gateway
+
+Traffic amnager is DNS level load balancer and work across region
+DNS is needed in trafiic manager even with static IPs.
+
+Traffic amnager can be fornt of load balancer to support across region load balancing
+Traffic amanger has autassigned DNS name
+
+create a DNS in DNS zone with traffic amanger dns name. add  a C record with your website name to map your website name to traffic manager DNS name.
+
+
+create web app is available through app services
+
+ACU Azure compute unit....1000 ACU is equivalent to 1 core
+ACU is combination of IOPS/CPU/
+
+Powershell in azure creates a tempoary VM which we call local machine for that session
+
+Create DNS record in azure for your wesite name
+Copy nameserver records to domain name provided freenom.com
+click Add custom domain and viadate to web app
+DNS txt record gives ownership
+A record gives hostname and host address
+add both records to DNS records namse before adding custom domain to webapps
+
+
+
+
+
+
+
+
+
+
+
