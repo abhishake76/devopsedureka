@@ -1,1 +1,10 @@
 edu
+Dimensions/Table data are discrete data which cannot be broken in deciemal and no mathematical calculation makes ssense
+Measures are continuous data and all mathematical stat methods can be used on it.
+
+tabaleau packaged workbook twbx  will have evrything like data, graph,  visualization etc
+tableau workbook twb will only have graph visualization etc but no data. so you need to share data also.
+so save workbook in twbx format 
+
+with tableau public you can share data in public folder on web but do not save any sensitive data as work is visible to everyone
+
