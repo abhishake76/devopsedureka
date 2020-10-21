@@ -8,3 +8,36 @@ so save workbook in twbx format
 
 with tableau public you can share data in public folder on web but do not save any sensitive data as work is visible to everyone
 
+  
+WHAT ARE JOINS ?
+
+1) INNER JOIN : COMMON OBSERVATIONS FROM BOTH THE TABLE : 
+
+2) LEFT JOIN : ALL OBS FROM LHS TABLE AND ONLY MATCHING FROM RHS TABLE :
+
+3) RIGHT JOIN : ALL OBS FROM RHS TABLE AND ONLY MATCHING FROM LHS TABLE : 
+
+4) FULL JOIN : ALL OBS FROM BOTH THE TABLE , WHETHER MATCHING OR NOT : 
+
+WHAT HAPPENS AFTER MERGING THE TABLES : 
+
+OBS NO REMAINS SAME BUT VAR INCREASES : 
+
+CONDITIONS: THERE MUST BE UNIQUE OR PRIMARY KEY IN YOUR DATSETS 
+
+VAR NAME MUST BE DIFFERENT IN BOTH THE DATASETS 
+
+WHAT IS APPENDING ? 
+
+WHAT HAPPENS ONCE YOU APPEND ? 
+
+OBS NO INCRESAES WHILE VAR REMAINS SAME 
+
+CONDITIONS: THERE MUST BE SAME VARIABLE NAME IN BOTH THE DATASETS 
+
+
+Data Blending is aggregation of data from two different source/queries
+One is orimary dat source and other datasource is secondary
+
+
+
