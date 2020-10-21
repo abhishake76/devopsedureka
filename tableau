@@ -39,5 +39,12 @@ CONDITIONS: THERE MUST BE SAME VARIABLE NAME IN BOTH THE DATASETS
 Data Blending is aggregation of data from two different source/queries
 One is orimary dat source and other datasource is secondary
 
+When you selecte data source with mutiple files, drag table in data source tab into right upper data area.
+
+The file that you slect first for mesaure drop is considered as primary data source.
+Sometime text attached to field might put valuein table/dimension  instead of measure. eg $ sign in front of cost. So remove $ sign and it will come in fornt of measure.
+
+
+
 
 
