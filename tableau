@@ -45,6 +45,22 @@ The file that you slect first for mesaure drop is considered as primary data sou
 Sometime text attached to field might put valuein table/dimension  instead of measure. eg $ sign in front of cost. So remove $ sign and it will come in fornt of measure.
 
 
+Highlights tab in show me is enabled if you have dimenison dropped in Rows and measure just selected in left hand data selection panel
+In highlights, all fields will show same color with highest concnetration on max value.
+-ve value will have different color.
+
+Measure names gives all mesaures as columns when dragged in  column
+You can also drop Mesaure names in filter to filter on measure name
+Mesaure values gives all mesaure values when dragged in text ara labels
+
+
+You can higlisght from measure value in Marks/Text area. Click on Measure and choose highlight
+You can drop mesaures in Mark area different categories like color, size, label, detail, tooltip
+
+
+stacked bar char: on top of each other
+grouped bar chart: beside each other or next to each other
+
 
 
 
