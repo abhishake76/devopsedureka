@@ -133,8 +133,18 @@ add both records to DNS records namse before adding custom domain to webapps
 
 
 
+We need Hyper-V feature enabled for docker.
+Setting is in BIOS.
 
 
+Create cintainer registry and enable admin access in Access keys of registry
+From local powershell do these steps
+az login
+az acr login --name myacr00009
+docker pull nginx
+docker run -it --rm -p 8080:80 nginx
+docker tag nginx myacr00009.azurecr.io/samples/nginx
+docker push myacr00009.azurecr.io/samples/nginx
 
 
 
