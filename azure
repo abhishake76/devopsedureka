@@ -148,6 +148,6 @@ docker push myacr00009.azurecr.io/samples/nginx
 
 
 
-
+Premimum storage account has on LRS availabiltiy redudndancy as Azure takes care of high availability and fault tolerance
 
 
