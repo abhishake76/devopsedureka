@@ -150,4 +150,12 @@ docker push myacr00009.azurecr.io/samples/nginx
 
 Premimum storage account has on LRS availabiltiy redudndancy as Azure takes care of high availability and fault tolerance
 
+Lifecycle rules can be applied to your storage account to move data from one tier to another.
+But tiers will have own restrictions as to for hoe much minimum time data should be in that tier
+
+
+
+
+
+
 
