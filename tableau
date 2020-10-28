@@ -75,6 +75,9 @@ and for column wise each column has equal total value
 Edit table calculation will give you option to show you adressing across or topdown 
 
 
+Aggregate calculation at level of detail is LOD
+LOD is always start with curly braces in calulation panel
+
 
 
 
