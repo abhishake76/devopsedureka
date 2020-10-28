@@ -67,6 +67,14 @@ Initially there was nly tde extension type in prep.
 Both extension can be openend in Tableau desktop
 prep can help you to rpepare data and visualization will be done in tableau desktop
 
+Paritioning of data means dividing data into segments
+Addressing means directionality of data calculation.
+so addressing is either row wise or column wise calculation...
+and expectation is that for row wise, each row has equal total value...
+and for column wise each column has equal total value
+Edit table calculation will give you option to show you adressing across or topdown 
+
+
 
 
 
