@@ -161,7 +161,9 @@ Even your root user of domain controller is not global admin user.
 
 whatsmydns.net let you check propogation of dns record to servers worldwide
 
-
+myapps.microsoft.com to see all your apps like pagerduty etc
+login wiht user to whom have given enterprise apps.
+launch your enterprise app from that login page....similar to okta.netscout.com
 
 
 
