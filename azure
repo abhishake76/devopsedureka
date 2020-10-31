@@ -154,6 +154,14 @@ Lifecycle rules can be applied to your storage account to move data from one tie
 But tiers will have own restrictions as to for hoe much minimum time data should be in that tier
 
 
+YOu need to to enter Global admin user in AZure AD connect application.
+The global Acrive Directiry needs to be created in Azure..
+Even your root user of domain controller is not global admin user.
+
+
+whatsmydns.net let you check propogation of dns record to servers worldwide
+
+
 
 
 
