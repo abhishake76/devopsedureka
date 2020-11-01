@@ -168,6 +168,7 @@ launch your enterprise app from that login page....similar to okta.netscout.com
 
 You have to add location to user to apply advanced secutiry and AD enterprise permissions.
 
-
+Run powershell command "Run Commonad" to disable firewall on VM
+Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 
 
