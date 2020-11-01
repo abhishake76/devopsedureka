@@ -172,3 +172,11 @@ Run powershell command "Run Commonad" to disable firewall on VM
 Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled False
 
 
+Enable  ICMP ping with File and Printer Sharing ICMPv4 in firewall.cpl
+Cick advanced setting -> Inbound Rule-
+
+
+
+
+
+
