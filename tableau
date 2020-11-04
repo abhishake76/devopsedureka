@@ -79,6 +79,13 @@ Aggregate calculation at level of detail is LOD
 LOD is always start with curly braces in calulation panel
 
 
+Any field in table which has geogrpahical data show globe in front of the field in data pane.
+This field can be used to represent fields on map.
+
+In filled map you can addonly one measure.
+While importing geo code keep only two file csn and scheme.ini(to consider number as String) in the folder from which you want to import.
+
+
 
 
 
