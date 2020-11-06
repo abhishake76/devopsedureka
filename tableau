@@ -86,6 +86,26 @@ In filled map you can addonly one measure.
 While importing geo code keep only two file csn and scheme.ini(to consider number as String) in the folder from which you want to import.
 
 
+Tableau maps uses openstreet maps for their data
+
+WMS server map: http://ows.terrestris.de/osm-gray/service?
+
+Box plot is also know as 5 number summary plot median,max, min, 1 quartile, 3rd quartile
+
+
+When you apply background mage, please imput proper value of X and Y with correct width and height from image size.
+
+Waterfall chart should both have positive and negative values to make an impact with display
+Positive value are in downward...Negative value are in upward in gantt...so we cna use calculate field -Profit and drop in size
+
+
+waterfall and pareto chart using runnng total in measure
+
+
+
+
+
+
 
 
 
