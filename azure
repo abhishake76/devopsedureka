@@ -176,6 +176,29 @@ Enable  ICMP ping with File and Printer Sharing ICMPv4 in firewall.cpl
 Cick advanced setting -> Inbound Rule-
 
 
+Max subscription through powershell 50...can be increase with support ticket to 200
+no creation limit on portal.max is 500
+A single user can belong to a maximum of 500 Azure AD tenants as a member or a guest
+
+By default, the number of members in a group that from your on-premises Active Directory to Azure AD by using Azure AD Connect is limited to 50,000 members.
+If you need to synch a group membership that's over this limit, you must onboard the Azure AD Connect Sync V2 endpoint API.
+
+Regiona have different pricing. Very rare zones in region can have different pricing
+
+Azure AD tenant get ceated by default when you create a subscription
+
+Subscription can be moved from one teant to another AD tenant.
+One tenant can have many susbcriptions
+All the user in AD tenant in this way can have access to multiple sbscriptions
+One on prem AD forest is mapped to normally one Azure AD tenant
+
+When moving resource from one group to another, resource itself and its all related/deoendent resources are locked and do not work during the move.
+
+
+
+
+
+
 
 
 
