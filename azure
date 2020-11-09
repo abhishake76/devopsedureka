@@ -196,6 +196,44 @@ When moving resource from one group to another, resource itself and its all rela
 
 
 
+User below if you face issues i.e. running script is disabled on this system/machine.
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+ Install-Module -Name Az -AllowClobber
+To run ARM template through Powershell
+New-AzResourceGroupDeployment -ResourceGroupName $rgName -TemplateFile $HOME/az104-05-vnetvm-template.json -TemplateParameterFile $HOME/az104-05-vnetvm-parameters.json
+Installing Azure Powershell if issue persists, follow this link to troubleshoot
+================================================================================
+https://docs.microsoft.com/en-us/powershell/azure/install-az-ps?view=azps-4.6.1
+To install nuget
+==================
+https://www.alitajran.com/unable-to-install-nuget-provider-for-powershell/
+
+Powershell ISE has intelligence to give command prompt for azure.
+
+If powershell ISE login into azure is failing, trust your device with a code givenb my ISE
+
+ARM resource template
+Https://azure.microsoft.com/en-us/resources/templates
+
+Use " Deploy a custom template" to load json ARM template in azure for resource creation
+
+cloud disk size is counted in GiB
+1 GIB=1.0774 GB
+
+Azure VM has 2 disk by defaul
+os disk has 2048 GiB labeled as C:\drive
+temporaty hidden disk for page and swap file, log files.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
