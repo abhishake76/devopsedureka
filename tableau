@@ -104,6 +104,44 @@ In funnel chart we always to sorting
 
 Use filter in dahsboard to link different charts in a dashboard.
 
+Use tree map for hierarchical data
+
+
+Script to use R language
+SCRIPT_REAL(
+    "library(mvoutlier);
+    sign2(cbind(.arg1))$wfinal01", 
+    SUM([Profit]))
+=0 
+THEN "outlier"
+ELSE "normal"
+END
+
+
+Use Server->Publish workbook for publicshing your Tableau work to Tablea Server or Tableau online
+
+A person who does not have Tableau can use free Tableau reader on their system or use server to view the report.
+
+Project Questions
+1) Using sample global superstore data I would like to  see sales view at the subcategories level  and I would like to see subcategories where sales  is greater than and equal to  500k  as high sales group and where sales is less than 500 k as low sales group .so how can we achieve this ?
+2) Now in next step we want to make this range of 500k dynamic so how we will do that?  
+3) I would like to forecast my monthly sales for 2016 and 2017 by using global  superstore data,  please filter for us county , how can I achieve this? and please generate the summary.
+4) Using the global superstore data, create a Map chart displaying Profit and sales per Country. Apply a filter on Market (Asia Pacific) (use a symbol map).
+6) I would like to see categories and subcategories based on profit , categories and subcategories based on sales  and categories and subcategories based on discount . Create a dashboard that consists of these 3 charts. Apply Dashboard action on filter and highlights , The dashboard should be fully interactive. Choose the generic desktop size for viewing the dashboard.
+7)  As the stakeholders will be accessing the dashboard through company issued tablets, ensure that the dashboard is tablet friendly (iPad).
+8) Create the stories from the above dashboard and the above three sheets  .
+9) I would like to see the orders which are getting shipped on same day and orders which are taking more than 4 days to deliver to the clients . Consider order data and shipment date for this problem.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
