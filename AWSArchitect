@@ -388,5 +388,23 @@ Permission Boundary is recommended  to be set with custom policy set
 EC2 -> Elastic Compute Cloud
 aws calculator: chekc price for each service and compare prices with azure or GCP
 
+Default user for all EC2 instances is ec2-user.
+to connet to intance give advacned full access for pem file from amazon to logged in admin user
+basically we have to ensure key is not publicly available and logged in user have full access otherwise connection will not go through
+and then ssh as
+ssh -i C:\Abhi.pem ec2-user@<public ip>
+Once you login, you see private ip address on bash shell
+
+
+commands to install apache
+yum -y update 
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+
+
+
+
 
 
