@@ -376,3 +376,17 @@ for small scale, we can use json
 freenon.com 000web free domain name provider
 
 
+In IAM, user permissions is superior than group
+For a group, you can add max 10 users. WHy this limitation?
+IAM is global service.
+No hierarchy of groups.
+Permission are attached to user with either AWS managed policy or custom managed policy
+Permission boundary control/limits the maximum set of  permissions policy an user can have
+Permission Boundary is recommended  to be set with custom policy set
+
+
+EC2 -> Elastic Compute Cloud
+aws calculator: chekc price for each service and compare prices with azure or GCP
+
+
+
