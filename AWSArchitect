@@ -390,21 +390,45 @@ aws calculator: chekc price for each service and compare prices with azure or GC
 
 Default user for all EC2 instances is ec2-user.
 to connet to intance give advacned full access for pem file from amazon to logged in admin user
+Disable inheritance on pem file in security settings and add permission for only akumar1 user
 basically we have to ensure key is not publicly available and logged in user have full access otherwise connection will not go through
 and then ssh as
-ssh -i C:\Abhi.pem ec2-user@<public ip>
+ssh -i C:\Users\akumar1\Downloads\awskey19_11.pem ec2-user@<public ip>
 Once you login, you see private ip address on bash shell
 
+Add OpenSSH to path on Windows 
 
 commands to install apache
+
 yum -y update 
 yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
 echo "Hello World from $(hostname -f)" > /var/www/html/index.html
 
+YOu can put above commands in User Data of Step 3 in Create Instance
+1st line should be to enable bash. no need for sudo as ec2 mahcine in background will be launched with root access.
+#!/bin/bash
+
+To Create AMI Create IMage from Instances and templates(right click on instance name).
+Select AMI and click launch to have new instance with custom AMI
+To delete AMI you can DeRegister AMI from AMI list.
+Modify AMI -> Image Permissions to make image public
 
 
+On stopping of instance public ip goes away but private ip remains same
+
+Default limit is 5 elastic staic ip per account
+Create Elastic IP and then associate Elastic IP to EC2 instance
 
 
-
+Instance: 
+1. On Demand Instances: Short Workload, predictable pricing 
+2. Reserved: Minimum of 1 to 3 : Long workload
+ ------sub cat:
+a) Reserved 
+b) Convertible Reserved inSTANCES - flexible 
+c) Scheduled R I - eg: fRIDAY 3 pm to 8 pm 
+3. Spot Instance: Short Workload, cheap in pricing, can loose an instance (less reliable)
+4. Dedicated Instance : No other customer will share your hardware aws data
+5. Dedicated Host
