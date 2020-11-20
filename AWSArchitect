@@ -432,3 +432,21 @@ c) Scheduled R I - eg: fRIDAY 3 pm to 8 pm
 3. Spot Instance: Short Workload, cheap in pricing, can loose an instance (less reliable)
 4. Dedicated Instance : No other customer will share your hardware aws data
 5. Dedicated Host
+
+
+AMI is a regional az service
+You can select AMI, rght clicke and presse copy and select region to copy
+
+EBS Elastic block storage is also region az specific storage
+if you create EBS while creating a instance you will have to do force detach to detach EBS from instance
+free tier limit for EBS is 30 gb
+
+Multi support attach is only available for Provisioned IOPS SSD IO 1 and that too only on nitro based advanced instances with very high virtual 
+
+To craete a snaphot, not necessary to detach volumne but recommended
+sna[shot shuld be created in off peak hours of mainteance period
+By default stored on S3 in same regioz az. You can copy snapshot to other regions.
+You can create AMI from snashot
+Snapshots are incremental i.e. if you try to make snapshot of same voumne again, incremental data will added to snapshot
+
+
