@@ -1,0 +1,34 @@
+Labs:
+Architect network infrastructure in Azure
+https://docs.microsoft.com/en-us/learn/modules/connect-on-premises-network-with-vpn-gateway/1-introduction
+Connect your on-premises network to Azure with VPN Gateway
+https://docs.microsoft.com/en-us/learn/modules/connect-on-premises-network-with-vpn-gateway/
+Connect your on-premises network to the Microsoft global network by using ExpressRoute
+https://docs.microsoft.com/en-us/learn/modules/connect-on-premises-network-with-expressroute/
+Secure and isolate access to Azure resources by using network security groups and service endpoints
+https://docs.microsoft.com/en-us/learn/modules/secure-and-isolate-with-nsg-and-service-endpoints/
+Distribute your services across Azure virtual networks and integrate them by using virtual network peering
+https://docs.microsoft.com/en-us/learn/modules/integrate-vnets-with-vnet-peering/
+Enhance your service availability and data locality by using Azure Traffic Manager
+https://
+from Arjun Singh Chauhan to All Participants:
+What is BGP in VPN Gateway
+from Jigar P to All Participants:
+Improve application scalability and resiliency by using Azure Load Balancer
+https://docs.microsoft.com/en-us/learn/modules/improve-app-scalability-resiliency-with-load-balancer/
+Load balance your web service traffic with Application Gateway
+https://docs.microsoft.com/en-us/learn/modules/load-balance-web-traffic-with-application-gateway/
+Manage and control traffic flow in your Azure deployment with routes
+https://docs.microsoft.com/en-us/learn/modules/control-network-traffic-flow-with-routes/
+Design an IP addressing schema for your Azure deployment
+https://docs.microsoft.com/en-us/learn/modules/design-ip-addressing-for-azure/
+Design a hybrid network architecture on Azure
+https://docs.microsoft.com/en-us/learn/modules/design-a-hybrid-network-architecture/
+Centralize your core services by using hub and spoke Azure virtual network architecture
+https://docs.microsoft.com/en-us/learn/modules/hub-and-spoke-network-architecture/
+Monitor and troubleshoot your end-to-end 
+from Abhishake Kumar to All Participants:
+you said you will share one note link and google drive loink for presentations...
+from Jigar P to All Participants:
+https://docs.microsoft.com/en-us/learn/modules/troubleshoot-azure-network-infrastructure/
+from Rushab Mehta to All Participants:
