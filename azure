@@ -234,8 +234,16 @@ preview.portal.netscout.com is the preview version of upcmoning portak azure new
 PIP - Public IP can be reserved if I purchase Reserved IP
 DIP - Dynamic IP
 
+AvailibitySet have 3 fault domains across az and 20 update domain slice across all fault domain
 
+If Azure has only 1 datacetner in Region you can only choose availability set for fault tolerance 
+as avalability zone fault tolerance needs minimum 2 data centers in a region.
 
+Register with micrsoft Insight and Alert Management which is required in order to access create virtual machine scle set
+Register-AzResourceProvider -ProviderNamespace Microsoft.Insights
+Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
+
+Premium SSD is 3X time price of HDD
 
 
 
