@@ -245,7 +245,10 @@ Register-AzResourceProvider -ProviderNamespace Microsoft.AlertsManagement
 
 Premium SSD is 3X time price of HDD
 
-
+For private dnS, add virtual link to vnet
+Enable auto registeration will add A record for every VM IP automatically in that VNEt
+Without it you will have to create manual A record in every VM
+for private DNS domain anme, every vm will get subdomain name 
 
 
 
