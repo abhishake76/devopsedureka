@@ -398,13 +398,16 @@ Once you login, you see private ip address on bash shell
 
 Add OpenSSH to path on Windows 
 
-commands to install apache
-
+commands to install apache via EC1 user data entry at time of creation of EC2
+#!/bin/bash
 yum -y update 
 yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
 echo "Hello World from $(hostname -f)" > /var/www/html/index.html
+
+TO update user data stop EC2 instance, see Instance Setting in dropdown menu and select user data to edit.
+
 
 YOu can put above commands in User Data of Step 3 in Create Instance
 1st line should be to enable bash. no need for sudo as ec2 mahcine in background will be launched with root access.
@@ -448,5 +451,20 @@ sna[shot shuld be created in off peak hours of mainteance period
 By default stored on S3 in same regioz az. You can copy snapshot to other regions.
 You can create AMI from snashot
 Snapshots are incremental i.e. if you try to make snapshot of same voumne again, incremental data will added to snapshot
+
+EFS:
+Create file system in Amazon console
+Map efs to VM file system for lan
+Create VM EC2 instance
+Allocate SSH and NFS inbound pernissio to security gorup assigned to efs and vm
+Login into VM
+Rum command
+sudo su or sudo -i
+Install aws efs utility
+yum -y install amazon-efs-utils
+Then select Attach in create EFS name to get a mount link like below:
+sudo mount -t efs -o tls fs-a3f74f56:/ efs
+If EFS mount does not work, try NFS mount such as
+sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-fde75f08.efs.us-east-1.amazonaws.com:/ efs
 
 
