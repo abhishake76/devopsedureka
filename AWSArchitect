@@ -467,4 +467,10 @@ sudo mount -t efs -o tls fs-a3f74f56:/ efs
 If EFS mount does not work, try NFS mount such as
 sudo mount -t nfs4 -o nfsvers=4.1,rsize=1048576,wsize=1048576,hard,timeo=600,retrans=2,noresvport fs-fde75f08.efs.us-east-1.amazonaws.com:/ efs
 
+Network Load balancer to used when
+-Layer 4 TCP and UDP load balancing
+-million of requests with low latency 
+-static IP support per AZ
+-It does not have security group as it works on layer 4 which does not require/support firewall
+
 
