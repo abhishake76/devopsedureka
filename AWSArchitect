@@ -473,4 +473,4 @@ Network Load balancer to used when
 -static IP support per AZ
 -It does not have security group as it works on layer 4 which does not require/support firewall
 
-
+Autoscaling create/removes machines bases on launch template rules
