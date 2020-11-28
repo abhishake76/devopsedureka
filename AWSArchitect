@@ -479,4 +479,12 @@ Autoscaling create/removes machines bases on launch template rules
 Dynamodb is made of nosql tables. max size for each element can be 400kb.
 
 
+What kind of policies can be included? Important for exam.
+
+GLobal accelerator helps to make access faster when servers and users are in ddiferent regions
+In anycast IP, all the servers in this group have same IP and users gets routed to edge server closest to them 
+Global accelerator uses Anycast concept
+
+
+
 
