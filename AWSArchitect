@@ -486,5 +486,11 @@ In anycast IP, all the servers in this group have same IP and users gets routed 
 Global accelerator uses Anycast concept
 
 
-
+Private subnet VMs need to be accessed from VM in public subnet.
+Copy the private key downlooaded from AWS on to your VM in public subnet.
+Then use this key to connect to VM in private subnet
+ssh -i /path/to/id_rsa user@server.nixcraft.com
+For private VM, one way is to create NAT instance ec2 machine and edit private route table to send traffic to internet via NAT instance.
+GIve proper rules in NAT instance security group
+STOP NEtwork settings Source/Destination check as it is a pass through 
 
