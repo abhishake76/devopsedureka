@@ -494,3 +494,11 @@ For private VM, one way is to create NAT instance ec2 machine and edit private r
 GIve proper rules in NAT instance security group
 STOP NEtwork settings Source/Destination check as it is a pass through 
 
+LAMBDA STart URL with different langauges
+https://console.aws.amazon.com/lambda/home?region=us-east-1#/begin
+
+
+
+
+
+
