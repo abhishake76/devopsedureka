@@ -3,3 +3,29 @@ LTE is standard for 4g technology
 
 R*T is receiver * transmitter in MIMO
 4*2 means 4 receiver and 2 transmitter
+
+
+Diversity gain is the increase in signal-to-interference ratio due to some diversity scheme, 
+or how much the transmission power can be reduced when a diversity scheme is introduced, without a performance loss. 
+Diversity gain is usually expressed in decibels, and sometimes as a power ratio.
+
+In telecommunications, a diversity scheme refers to a method for improving the reliability of a message signal 
+by using two or more communication channels with different characteristics
+
+Cognitive radio (CR) is a form of wireless communication in which a transceiver can intelligently 
+detect which communication channels are in use and which are not, and instantly move into vacant channels 
+while avoiding occupied ones.
+
+Cognition is defined as 'the mental action or process of acquiring knowledge and understanding 
+through thought, experience, and the senses
+
+Study Rayleigh fading channel coefficent
+Study white noise with power
+
+Study different gaussian, matrix multiplication and matrix inverse, and pseudo inverse
+A hermesian and relation with A
+
+Study probability density function, gaussian random variable.
+
+
+
