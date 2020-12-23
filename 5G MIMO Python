@@ -27,5 +27,11 @@ A hermesian and relation with A
 
 Study probability density function, gaussian random variable.
 
+MIMO simulation for r*t simulation r>t
+2x2 sim 3x3 sim 4x4
+3x2 sim 4x3 sim 2x1
+4x2 sim 5 x3 sim 3x1
+r-t gives similar curves.
+diversity order is r-t+1
 
 
